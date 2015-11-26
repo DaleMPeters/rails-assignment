@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'activerecord-session_store'
+
 # For pagination of the wines in the listings page
 gem 'will_paginate'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
