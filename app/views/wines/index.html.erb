@@ -1,0 +1,43 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Wines</h1>
+
+<%= form_tag wines_path, :method => "get" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
+<table>
+  <thead>
+    <tr>
+      <th>Short description</th>
+      <th>Bottle size</th>
+      <th>Price</th>
+      <th>Company</th>
+      <th>Picture</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @wines.each do |wine| %>
+      <tr>
+        <td><%= wine.short_description %></td>
+        <td><%= wine.bottle_size %></td>
+        <td><%= wine.price %></td>
+        <td><%= wine.company %></td>
+        <td><%= wine.picture_id %></td>
+        <td><%= link_to 'Show', wine %></td>
+        <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
+        <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= will_paginate @wines %>
+<br>
+
+<%= link_to 'New Wine', new_wine_path %>

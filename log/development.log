@@ -1,0 +1,1437 @@
+  [1m[36m (174.8ms)[0m  [1mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL) [0m
+  [1m[35m (0.4ms)[0m  select sqlite_version(*)
+  [1m[36m (105.7ms)[0m  [1mCREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.8ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-24 23:09:58 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (7.9ms)
+Completed 200 OK in 178ms (Views: 109.1ms | ActiveRecord: 0.0ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.5ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateWines (20151124231420)
+  [1m[35m (0.5ms)[0m  begin transaction
+  [1m[36m (2.0ms)[0m  [1mCREATE TABLE "wines" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "short_description" varchar, "bottle_size" varchar, "price" float, "long_description" varchar, "origin_country" varchar, "company" varchar, "grape_type" varchar, "is_vegetarian" boolean, "picture_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151124231420"]]
+  [1m[36m (97.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.5ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-24 23:15:53 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.8ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 6654ms (Views: 6593.4ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-24 23:16:00 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-24 23:16:00 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-24 23:27:42 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.7ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (144.9ms)
+Completed 200 OK in 332ms (Views: 318.7ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-24 23:30:07 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (213.9ms)
+  Rendered wines/new.html.erb within layouts/application (229.8ms)
+Completed 200 OK in 396ms (Views: 392.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-24 23:30:11 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.8ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (11.4ms)
+Completed 200 OK in 168ms (Views: 164.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-24 23:40:04 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (89.3ms)
+Completed 200 OK in 1343ms (Views: 1273.7ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/wines/1" for 127.0.0.1 at 2015-11-24 23:41:34 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mWine Load (0.9ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered wines/show.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 311ms (Views: 161.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-24 23:45:49 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT "wines".* FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 170ms (Views: 166.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:03:37 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (2.5ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 235ms (Views: 170.0ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:04:28 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.6ms)[0m  SELECT "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC
+  Rendered wines/index.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 243ms (Views: 226.1ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:04:32 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (140.6ms)
+  Rendered wines/new.html.erb within layouts/application (174.3ms)
+Completed 200 OK in 395ms (Views: 392.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-25 00:06:45 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wNElVvTkSljXmuyVZQLMT00esW1/fbcdZoK9YsINm1m4RQk/FoiZIp0i3nmxT1H+tGMDWNfUu5clG5e63dR61Q==", "wine"=>{"short_description"=>"Cheap wine", "bottle_size"=>"large", "price"=>"2", "long_description"=>"tastes like vinegar", "origin_country"=>"Spain", "company"=>"Bargain Wines", "grape_type"=>"Chardonnay", "is_vegetarian"=>"1", "picture_id"=>"3"}, "commit"=>"Create Wine"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.3ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Cheap wine"], ["bottle_size", "large"], ["price", 2.0], ["long_description", "tastes like vinegar"], ["origin_country", "Spain"], ["company", "Bargain Wines"], ["grape_type", "Chardonnay"], ["is_vegetarian", "t"], ["picture_id", 3], ["created_at", "2015-11-25 00:06:45.620718"], ["updated_at", "2015-11-25 00:06:45.620718"]]
+  [1m[36m (146.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/wines/3
+Completed 302 Found in 187ms (ActiveRecord: 149.6ms)
+
+
+Started GET "/wines/3" for 127.0.0.1 at 2015-11-25 00:06:45 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[35mWine Load (3.2ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 3]]
+  Rendered wines/show.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 195ms (Views: 185.3ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:06:49 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.0ms)[0m  [1mSELECT "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC[0m
+  Rendered wines/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 339ms (Views: 189.5ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:07:01 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (22.7ms)
+  Rendered wines/new.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 221ms (Views: 216.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-25 00:13:09 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tEzkgOumEpXe3z6vT+J168MspyX/Ub4ALBMtpqw+QPnM2MjpCcrB75RnDEObr+haOlEVEFf4sopvigd+s+ehdQ==", "wine"=>{"short_description"=>"Tasty wine", "bottle_size"=>"small", "price"=>"4.99", "long_description"=>"mmmm, wine", "origin_country"=>"Italy", "company"=>"Red Wine Store", "grape_type"=>"White", "is_vegetarian"=>"0", "picture_id"=>"7"}, "commit"=>"Create Wine"}
+  [1m[35m (0.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["short_description", "Tasty wine"], ["bottle_size", "small"], ["price", 4.99], ["long_description", "mmmm, wine"], ["origin_country", "Italy"], ["company", "Red Wine Store"], ["grape_type", "White"], ["is_vegetarian", "f"], ["picture_id", 7], ["created_at", "2015-11-25 00:13:09.029269"], ["updated_at", "2015-11-25 00:13:09.029269"]]
+  [1m[35m (207.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/wines/4
+Completed 302 Found in 227ms (ActiveRecord: 208.9ms)
+
+
+Started GET "/wines/4" for 127.0.0.1 at 2015-11-25 00:13:09 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered wines/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 185ms (Views: 180.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:13:13 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC
+  Rendered wines/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 184ms (Views: 179.7ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:23:39 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (2.7ms)[0m  [1mSELECT "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC[0m
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `paginate' for #<Wine::ActiveRecord_Relation:0xb4c3dc8c>):
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (13.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (103.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (148.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:25:05 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.5ms)[0m  SELECT "wines".* FROM "wines"
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `paginate' for #<Wine::ActiveRecord_Relation:0xb4417e7c>):
+  app/controllers/wines_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (36.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (102.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (64.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (132.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:25:40 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `paginate' for #<Class:0xb4b25994>):
+  app/controllers/wines_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (116.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (69.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (11.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (154.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:30:07 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `paginate' for #<Class:0xb54864d4>):
+  app/controllers/wines_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (34.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (65.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (144.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:30:14 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.6ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+Completed 500 Internal Server Error in 110ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `paginate' for #<Wine::ActiveRecord_Relation:0xb48f2ab4>):
+  app/controllers/wines_controller.rb:9:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (16.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (108.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (110.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (200.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:30:29 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.1ms)[0m  SELECT  "wines".* FROM "wines" LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (155.4ms)
+Completed 200 OK in 1310ms (Views: 1251.2ms | ActiveRecord: 3.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:30:50 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (5.8ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (85.7ms)
+Completed 200 OK in 273ms (Views: 248.5ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:30:54 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (338.1ms)
+  Rendered wines/new.html.erb within layouts/application (372.9ms)
+Completed 200 OK in 548ms (Views: 545.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-25 00:31:41 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Ex5JOmdugdNK9SUCu2BBi4f97sgaz03KN4+ClnFsf1RrimVThQJSqQBNF+5vLdw6foBc/bJmQUB0FqhObrWe2A==", "wine"=>{"short_description"=>"Another wine", "bottle_size"=>"small", "price"=>"3.00", "long_description"=>"Wine from Southern France", "origin_country"=>"France", "company"=>"Bargain Wines", "grape_type"=>"White", "is_vegetarian"=>"0", "picture_id"=>"3"}, "commit"=>"Create Wine"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["short_description", "Another wine"], ["bottle_size", "small"], ["price", 3.0], ["long_description", "Wine from Southern France"], ["origin_country", "France"], ["company", "Bargain Wines"], ["grape_type", "White"], ["is_vegetarian", "f"], ["picture_id", 3], ["created_at", "2015-11-25 00:31:41.968408"], ["updated_at", "2015-11-25 00:31:41.968408"]]
+  [1m[35m (134.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/wines/5
+Completed 302 Found in 175ms (ActiveRecord: 136.3ms)
+
+
+Started GET "/wines/5" for 127.0.0.1 at 2015-11-25 00:31:42 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mWine Load (1.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered wines/show.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 240ms (Views: 200.3ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:32:12 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 238ms (Views: 233.4ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:32:16 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (26.3ms)
+  Rendered wines/new.html.erb within layouts/application (30.3ms)
+Completed 200 OK in 208ms (Views: 201.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-25 00:33:11 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"lpeptz8R/kwDgyTbBqo3ba5kc9SCMRfxfYEGOUF0l1juA4Xe3X0tNkk7FjfS56rcVxnB4SqYG3s+GCzhXq121A==", "wine"=>{"short_description"=>"Alcohol Free Goodness", "bottle_size"=>"Large", "price"=>"8.99", "long_description"=>"Long description", "origin_country"=>"England", "company"=>"Bargain Wines", "grape_type"=>"Red", "is_vegetarian"=>"1", "picture_id"=>""}, "commit"=>"Create Wine"}
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.8ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Alcohol Free Goodness"], ["bottle_size", "Large"], ["price", 8.99], ["long_description", "Long description"], ["origin_country", "England"], ["company", "Bargain Wines"], ["grape_type", "Red"], ["is_vegetarian", "t"], ["created_at", "2015-11-25 00:33:11.199271"], ["updated_at", "2015-11-25 00:33:11.199271"]]
+  [1m[36m (200.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/wines/6
+Completed 302 Found in 238ms (ActiveRecord: 202.3ms)
+
+
+Started GET "/wines/6" for 127.0.0.1 at 2015-11-25 00:33:11 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered wines/show.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 191ms (Views: 184.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:33:13 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (28.4ms)
+Completed 200 OK in 356ms (Views: 351.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines/6/edit" for 127.0.0.1 at 2015-11-25 00:33:19 +0000
+Processing by WinesController#edit as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 6]]
+  Rendered wines/_form.html.erb (43.3ms)
+  Rendered wines/edit.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 261ms (Views: 256.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/wines/6" for 127.0.0.1 at 2015-11-25 00:33:23 +0000
+Processing by WinesController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"AuGC0XNg+al99FB626+X08rw7iAlfiOECZPpOOLYBzZ6da64kQwq0zdMYpYP4gpiM41cFY3XLw5KCsPg/QHmug==", "wine"=>{"short_description"=>"Alcohol Free Goodness", "bottle_size"=>"Large", "price"=>"8.99", "long_description"=>"Long description", "origin_country"=>"England", "company"=>"Bargain Wines", "grape_type"=>"Red", "is_vegetarian"=>"1", "picture_id"=>"7"}, "commit"=>"Update Wine", "id"=>"6"}
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mUPDATE "wines" SET "picture_id" = ?, "updated_at" = ? WHERE "wines"."id" = ?[0m  [["picture_id", 7], ["updated_at", "2015-11-25 00:33:23.703718"], ["id", 6]]
+  [1m[35m (194.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/wines/6
+Completed 302 Found in 224ms (ActiveRecord: 196.6ms)
+
+
+Started GET "/wines/6" for 127.0.0.1 at 2015-11-25 00:33:23 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 6]]
+  Rendered wines/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 173ms (Views: 168.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:33:34 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 195ms (Views: 190.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:33:52 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (24.7ms)
+  Rendered wines/new.html.erb within layouts/application (30.4ms)
+Completed 200 OK in 201ms (Views: 198.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-25 00:34:38 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"sKnEK+Lx3LuRIYmfTc65UGLh95oFv+a67FhTUWkkj6LIPehCAJ0PwduZu3OZgyThm5xFr60W6jCvwXmJdv1uLg==", "wine"=>{"short_description"=>"AAAAAAAAAA", "bottle_size"=>"Small", "price"=>"5.99", "long_description"=>"ffffffffffffff", "origin_country"=>"afdf", "company"=>"sdf", "grape_type"=>"fsdf", "is_vegetarian"=>"1", "picture_id"=>"6"}, "commit"=>"Create Wine"}
+  [1m[36m (2.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "AAAAAAAAAA"], ["bottle_size", "Small"], ["price", 5.99], ["long_description", "ffffffffffffff"], ["origin_country", "afdf"], ["company", "sdf"], ["grape_type", "fsdf"], ["is_vegetarian", "t"], ["picture_id", 6], ["created_at", "2015-11-25 00:34:38.599945"], ["updated_at", "2015-11-25 00:34:38.599945"]]
+  [1m[36m (201.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/wines/7
+Completed 302 Found in 246ms (ActiveRecord: 204.0ms)
+
+
+Started GET "/wines/7" for 127.0.0.1 at 2015-11-25 00:34:38 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 7]]
+  Rendered wines/show.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 198ms (Views: 193.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:34:45 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 174ms (Views: 169.0ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-25 00:34:55 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (20.8ms)
+  Rendered wines/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 209ms (Views: 206.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:35:09 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.6ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 0
+  [1m[36m (0.7ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (57.3ms)
+Completed 200 OK in 230ms (Views: 216.4ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:35:15 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (21.6ms)
+Completed 200 OK in 240ms (Views: 234.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:35:22 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (16.9ms)
+Completed 200 OK in 249ms (Views: 244.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:35:29 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (79.1ms)
+Completed 200 OK in 270ms (Views: 255.9ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:37:23 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (44.3ms)
+Completed 200 OK in 302ms (Views: 297.5ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:37:27 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (6.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 243ms (Views: 223.4ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:38:19 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.5ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (26.3ms)
+Completed 200 OK in 231ms (Views: 225.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:46:18 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.6ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (59.0ms)
+Completed 200 OK in 227ms (Views: 213.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:48:21 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.9ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 395ms (Views: 385.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:48:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (198.1ms)
+Completed 200 OK in 1313ms (Views: 1249.8ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:48:56 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 206ms (Views: 201.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:49:26 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.6ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 198ms (Views: 192.9ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-25 00:49:27 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:50:05 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (199.3ms)
+Completed 200 OK in 1373ms (Views: 1306.3ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:50:24 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (48.5ms)
+Completed 200 OK in 849ms (Views: 837.0ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-25 00:50:28 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-25 00:50:28 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:51:55 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (49.0ms)
+Completed 200 OK in 227ms (Views: 213.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:52:00 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 224ms (Views: 219.1ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:52:35 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (111.1ms)
+Completed 200 OK in 1523ms (Views: 1461.5ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:53:03 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (26.7ms)
+Completed 200 OK in 240ms (Views: 213.3ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/wines?page=2" for 127.0.0.1 at 2015-11-25 00:53:07 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mWine Load (1.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 1
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (30.0ms)
+Completed 200 OK in 282ms (Views: 277.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/wines?page=3" for 127.0.0.1 at 2015-11-25 00:53:12 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"3"}
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 2
+  [1m[36m (0.5ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (25.8ms)
+Completed 200 OK in 190ms (Views: 184.9ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 00:53:47 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (62.4ms)
+Completed 200 OK in 233ms (Views: 219.0ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:19:48 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (79.0ms)
+Completed 200 OK in 1263ms (Views: 1203.1ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:28:00 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.4ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (29.4ms)
+Completed 200 OK in 216ms (Views: 210.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:28:07 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (36.3ms)
+Completed 200 OK in 297ms (Views: 289.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:28:30 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (99.0ms)
+Completed 200 OK in 1467ms (Views: 1395.3ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:29:14 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (7.8ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (55.5ms)
+Completed 200 OK in 221ms (Views: 210.0ms | ActiveRecord: 7.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (27.1ms)
+Completed 200 OK in 195ms (Views: 191.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:19 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:20 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:20 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:20 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:29:36 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 397ms (Views: 391.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-25 22:29:37 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:32:26 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.3ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (40.1ms)
+Completed 200 OK in 232ms (Views: 226.7ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:50:04 +0000
+
+NameError (undefined local variable or method `map' for #<ActionDispatch::Routing::Mapper:0xb3e5244c>):
+  config/routes.rb:4:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (25.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (247.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (344.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (85.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (178.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:51:44 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.9ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (89.2ms)
+Completed 200 OK in 278ms (Views: 263.6ms | ActiveRecord: 4.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:57:07 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (33.9ms)
+Completed 200 OK in 236ms (Views: 226.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Another&commit=Search" for 127.0.0.1 at 2015-11-25 22:57:19 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Another", "commit"=>"Search"}
+  [1m[36mWine Load (1.2ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (21.9ms)
+Completed 200 OK in 216ms (Views: 212.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 22:59:54 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (92.6ms)
+Completed 500 Internal Server Error in 104ms (ActiveRecord: 1.2ms)
+
+ActionView::Template::Error (undefined local variable or method `name' for #<#<Class:0xc3470f4>:0xb3def3b0>):
+    4: 
+    5: <%= form_tag wines_path, :method => "get" do %>
+    6:   <p>
+    7:     <%= text_field_tag :search, params[:search], name => nil %>
+    8:     <%= submit_tag "Search" %>
+    9:   </p>
+   10: <% end %>
+  app/views/wines/index.html.erb:7:in `block in _app_views_wines_index_html_erb___1031292925__638618438'
+  app/views/wines/index.html.erb:5:in `_app_views_wines_index_html_erb___1031292925__638618438'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (48.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (121.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (11.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (121.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (276.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:00:26 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.5ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (93.4ms)
+Completed 200 OK in 335ms (Views: 328.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&commit=Search" for 127.0.0.1 at 2015-11-25 23:00:39 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Search"}
+  [1m[35mWine Load (1.9ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 227ms (Views: 221.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&commit=Search" for 127.0.0.1 at 2015-11-25 23:00:50 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Search"}
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (18.5ms)
+Completed 200 OK in 199ms (Views: 194.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-11-25 23:00:50 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-11-25 23:00:51 +0000
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:00:59 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.3ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (34.3ms)
+Completed 200 OK in 277ms (Views: 271.9ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&commit=Search" for 127.0.0.1 at 2015-11-25 23:01:05 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Search"}
+  [1m[36mWine Load (1.2ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (22.2ms)
+Completed 200 OK in 212ms (Views: 202.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:01:39 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (4.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (173.8ms)
+Completed 200 OK in 1531ms (Views: 1468.8ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&commit=Search" for 127.0.0.1 at 2015-11-25 23:01:46 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "commit"=>"Search"}
+  [1m[36mWine Load (1.8ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (21.3ms)
+Completed 200 OK in 223ms (Views: 211.1ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:04:14 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.8ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 252ms (Views: 243.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Cheap" for 127.0.0.1 at 2015-11-25 23:04:21 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Cheap"}
+  [1m[36mWine Load (1.2ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (25.5ms)
+Completed 200 OK in 319ms (Views: 314.9ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-25 23:04:37 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:04:42 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (13.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (41.7ms)
+Completed 200 OK in 240ms (Views: 222.4ms | ActiveRecord: 13.5ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Cheap" for 127.0.0.1 at 2015-11-25 23:04:52 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Cheap"}
+  [1m[36mWine Load (1.4ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (19.1ms)
+Completed 200 OK in 244ms (Views: 239.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Cheap" for 127.0.0.1 at 2015-11-25 23:04:55 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Cheap"}
+  [1m[35mWine Load (1.3ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 215ms (Views: 207.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:13:48 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 47ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `search' for #<Class:0xb3db26f4>):
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (14.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (16.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (138.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (6.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (358.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:18:11 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 81ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `search' for #<Class:0xb50b4914>):
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (53.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (26.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (196.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (117.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (274.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:18:24 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `search' for #<Class:0xb50b4914>):
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (83.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (28.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (207.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (157.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:18:45 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (2.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 89ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `search' for #<Class:0xb24033c>):
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (46.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (17.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (233.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (110.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (8.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (258.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:19:11 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.1ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 81ms (ActiveRecord: 7.2ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Wine with 'id'=all):
+  app/models/wine.rb:6:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (67.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (45.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (28.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (227.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (119.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (6.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (18.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (347.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:19:58 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 55ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `params' for #<Class:0xc44e984>):
+  app/models/wine.rb:7:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (79.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (38.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (259.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (164.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (328.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:40:01 +0000
+
+SyntaxError (/home/dale/university/se31520/assignment/my-alcohol-free-wines/app/controllers/wines_controller.rb:8: syntax error, unexpected ')', expecting =>
+/home/dale/university/se31520/assignment/my-alcohol-free-wines/app/controllers/wines_controller.rb:77: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/wines_controller.rb:8: syntax error, unexpected ')', expecting =>
+  app/controllers/wines_controller.rb:77: syntax error, unexpected end-of-input, expecting keyword_end
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (51.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (17.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (8.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (165.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (8.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (132.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (261.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:41:17 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (6.2ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (363.2ms)
+Completed 200 OK in 1832ms (Views: 1739.4ms | ActiveRecord: 16.7ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=A" for 127.0.0.1 at 2015-11-25 23:41:30 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"A"}
+  [1m[35mWine Load (0.9ms)[0m  SELECT "wines".* FROM "wines" WHERE "wines"."id" IN (NULL, NULL)
+Completed 404 Not Found in 30ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Wines with 'id': (all, {:conditions=>["short_description LIKE ?", "%A%"]}) (found 0 results, but was looking for 2)):
+  app/models/wine.rb:4:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (25.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (163.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (5.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (199.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (343.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-25 23:50:30 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (15.5ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (137.7ms)
+Completed 200 OK in 489ms (Views: 458.6ms | ActiveRecord: 20.4ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Alcohol" for 127.0.0.1 at 2015-11-25 23:50:44 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Alcohol"}
+  [1m[35mWine Load (0.9ms)[0m  SELECT "wines".* FROM "wines" WHERE "wines"."id" IN (NULL, NULL)
+Completed 404 Not Found in 45ms (ActiveRecord: 0.9ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Wines with 'id': (all, {:conditions=>["short_description LIKE ?", "%Alcohol%"]}) (found 0 results, but was looking for 2)):
+  app/models/wine.rb:4:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (55.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (160.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (4.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (7.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (186.4ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Alcohol" for 127.0.0.1 at 2015-11-25 23:53:45 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Alcohol"}
+  [1m[36mWine Load (0.8ms)[0m  [1mSELECT "wines".* FROM "wines" WHERE "wines"."id" IN (NULL, NULL)[0m
+Completed 404 Not Found in 57ms (ActiveRecord: 8.7ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Wines with 'id': (all, {:conditions=>["short_description LIKE ?", "Alcohol"]}) (found 0 results, but was looking for 2)):
+  app/models/wine.rb:4:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (48.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (36.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (201.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (98.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (227.1ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Alcohol" for 127.0.0.1 at 2015-11-26 00:05:25 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Alcohol"}
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `params' for #<Class:0xb4d4eb94>):
+  app/models/wine.rb:4:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (91.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (37.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (320.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (112.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (217.8ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Alcohol" for 127.0.0.1 at 2015-11-26 00:05:56 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Alcohol"}
+  [1m[35mWine Load (0.8ms)[0m  SELECT "wines".* FROM "wines" WHERE "wines"."id" IN (NULL, NULL)
+Completed 404 Not Found in 120ms (ActiveRecord: 16.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find all Wines with 'id': (all, {:conditions=>["short_description LIKE ?", "Alcohol"]}) (found 0 results, but was looking for 2)):
+  app/models/wine.rb:4:in `search'
+  app/controllers/wines_controller.rb:8:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (45.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (182.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (109.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (237.9ms)
+
+
+Started PUT "/console/repl_sessions/7273bff5cd5ac583dee8c47f6983cfe0" for 127.0.0.1 at 2015-11-26 00:06:17 +0000
+
+
+Started PUT "/console/repl_sessions/7273bff5cd5ac583dee8c47f6983cfe0" for 127.0.0.1 at 2015-11-26 00:06:26 +0000
+  [1m[36mWine Load (1.4ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+
+
+Started PUT "/console/repl_sessions/7273bff5cd5ac583dee8c47f6983cfe0" for 127.0.0.1 at 2015-11-26 00:06:35 +0000
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Alcohol" for 127.0.0.1 at 2015-11-26 00:08:39 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Alcohol"}
+  [1m[35mWine Load (1.9ms)[0m  SELECT  "wines".* FROM "wines" WHERE (short_description LIKE 'Alcohol%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (97.6ms)
+Completed 200 OK in 445ms (Views: 413.6ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:08:49 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 440ms (Views: 429.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-26 00:09:05 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (112.1ms)
+  Rendered wines/new.html.erb within layouts/application (119.4ms)
+Completed 200 OK in 310ms (Views: 306.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-26 00:09:40 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ohx/zYaKEOa7Zn4ERdxajdDdPENXxuxhr7K5c9KMZMvaiFOkZObDnPHeTOiRkcc8KaCOdv9v4OvsK5OrzVWFRw==", "wine"=>{"short_description"=>"Wine tasty", "bottle_size"=>"small", "price"=>"3.49", "long_description"=>"Tasty wine", "origin_country"=>"Brazil", "company"=>"Bargain Wines", "grape_type"=>"Red", "is_vegetarian"=>"1", "picture_id"=>"1"}, "commit"=>"Create Wine"}
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mINSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["short_description", "Wine tasty"], ["bottle_size", "small"], ["price", 3.49], ["long_description", "Tasty wine"], ["origin_country", "Brazil"], ["company", "Bargain Wines"], ["grape_type", "Red"], ["is_vegetarian", "t"], ["picture_id", 1], ["created_at", "2015-11-26 00:09:40.431244"], ["updated_at", "2015-11-26 00:09:40.431244"]]
+  [1m[35m (202.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/wines/8
+Completed 302 Found in 300ms (ActiveRecord: 204.5ms)
+
+
+Started GET "/wines/8" for 127.0.0.1 at 2015-11-26 00:09:40 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 8]]
+  Rendered wines/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 407ms (Views: 387.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:09:44 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (9.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (56.6ms)
+Completed 200 OK in 592ms (Views: 579.6ms | ActiveRecord: 9.4ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=tasty" for 127.0.0.1 at 2015-11-26 00:09:53 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"tasty"}
+  [1m[36mWine Load (6.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE 'tasty%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (21.8ms)
+Completed 200 OK in 253ms (Views: 227.7ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/wines/new" for 127.0.0.1 at 2015-11-26 00:09:59 +0000
+Processing by WinesController#new as HTML
+  Rendered wines/_form.html.erb (54.6ms)
+  Rendered wines/new.html.erb within layouts/application (67.8ms)
+Completed 200 OK in 329ms (Views: 315.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/wines" for 127.0.0.1 at 2015-11-26 00:10:35 +0000
+Processing by WinesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yDPQQT2qjpIIIHl/AHBUx74pFXEPijeMX4aiAd6/q06wp/wo38Zd6EKYS5PUPcl2R1SnRKcjOwYcH4jZwWZKwg==", "wine"=>{"short_description"=>"tasty wine2", "bottle_size"=>"large", "price"=>"5.00", "long_description"=>"MMMMM", "origin_country"=>"dfsdf", "company"=>"Bargain Wines", "grape_type"=>"green", "is_vegetarian"=>"1", "picture_id"=>"4"}, "commit"=>"Create Wine"}
+  [1m[35m (4.1ms)[0m  begin transaction
+  [1m[36mSQL (14.1ms)[0m  [1mINSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "picture_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["short_description", "tasty wine2"], ["bottle_size", "large"], ["price", 5.0], ["long_description", "MMMMM"], ["origin_country", "dfsdf"], ["company", "Bargain Wines"], ["grape_type", "green"], ["is_vegetarian", "t"], ["picture_id", 4], ["created_at", "2015-11-26 00:10:35.545748"], ["updated_at", "2015-11-26 00:10:35.545748"]]
+  [1m[35m (236.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/wines/9
+Completed 302 Found in 291ms (ActiveRecord: 254.3ms)
+
+
+Started GET "/wines/9" for 127.0.0.1 at 2015-11-26 00:10:35 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"9"}
+  [1m[36mWine Load (16.9ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 9]]
+  Rendered wines/show.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 488ms (Views: 455.5ms | ActiveRecord: 16.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:10:47 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (27.0ms)
+Completed 200 OK in 240ms (Views: 234.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=tasty" for 127.0.0.1 at 2015-11-26 00:10:58 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"tasty"}
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE 'tasty%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (56.1ms)
+Completed 200 OK in 444ms (Views: 439.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:11:19 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (314.0ms)
+Completed 200 OK in 677ms (Views: 649.7ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=Nice" for 127.0.0.1 at 2015-11-26 00:11:57 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"Nice"}
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%Nice%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 193ms (Views: 187.8ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=tasty" for 127.0.0.1 at 2015-11-26 00:12:25 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"tasty"}
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%tasty%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (51.5ms)
+Completed 200 OK in 307ms (Views: 284.7ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-26 00:14:05 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (18.2ms)
+Completed 200 OK in 34ms (Views: 31.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:14:11 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (7.0ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (45.8ms)
+Completed 200 OK in 371ms (Views: 360.5ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 00:19:15 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (2.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (131.0ms)
+Completed 200 OK in 320ms (Views: 301.4ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=a" for 127.0.0.1 at 2015-11-26 00:19:20 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"a"}
+  [1m[36mWine Load (2.2ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%a%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (47.6ms)
+Completed 200 OK in 339ms (Views: 332.5ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=cheap" for 127.0.0.1 at 2015-11-26 00:21:56 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"cheap"}
+  [1m[35mWine Load (1.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%cheap%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (65.5ms)
+Completed 200 OK in 360ms (Views: 341.5ms | ActiveRecord: 4.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-11-26 10:41:23 +0000
+Processing by Rails::WelcomeController#index as HTML
+  Rendered /var/lib/gems/2.1.0/gems/railties-4.2.4/lib/rails/templates/rails/welcome/index.html.erb (0.3ms)
+Completed 200 OK in 10ms (Views: 6.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-26 10:41:28 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (3.3ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (161.3ms)
+Completed 200 OK in 670ms (Views: 624.0ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/wines?page=2" for 127.0.0.1 at 2015-11-26 10:41:45 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mWine Load (1.2ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 2[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 251ms (Views: 242.8ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=alcohol" for 127.0.0.1 at 2015-11-26 10:41:58 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"alcohol"}
+  [1m[36mWine Load (1.2ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%alcohol%')  ORDER BY "wines"."short_description" ASC LIMIT 2 OFFSET 0[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "wines" WHERE (short_description LIKE '%alcohol%')
+  Rendered wines/index.html.erb within layouts/application (66.1ms)
+Completed 200 OK in 407ms (Views: 400.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=alcohol" for 127.0.0.1 at 2015-11-26 10:42:27 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"alcohol"}
+  [1m[36mWine Load (2.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%alcohol%')  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 0[0m
+  [1m[35m (0.9ms)[0m  SELECT COUNT(*) FROM "wines" WHERE (short_description LIKE '%alcohol%')
+  Rendered wines/index.html.erb within layouts/application (212.4ms)
+Completed 200 OK in 891ms (Views: 864.6ms | ActiveRecord: 5.8ms)
+
+
+Started GET "/wines?page=2&search=alcohol&utf8=%E2%9C%93" for 127.0.0.1 at 2015-11-26 10:42:31 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2", "search"=>"alcohol", "utf8"=>"✓"}
+  [1m[36mWine Load (1.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%alcohol%')  ORDER BY "wines"."short_description" ASC LIMIT 1 OFFSET 1[0m
+  [1m[35m (0.8ms)[0m  SELECT COUNT(*) FROM "wines" WHERE (short_description LIKE '%alcohol%')
+  Rendered wines/index.html.erb within layouts/application (44.1ms)
+Completed 200 OK in 389ms (Views: 383.2ms | ActiveRecord: 1.7ms)
+  [1m[36mActiveRecord::SchemaMigration Load (0.6ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddImageUrlToWines (20151126114804)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36m (34.0ms)[0m  [1mALTER TABLE "wines" ADD "image_url" varchar[0m
+  [1m[35mSQL (0.7ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20151126114804"]]
+  [1m[36m (105.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.6ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
