@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151126114804) do
+ActiveRecord::Schema.define(version: 20151126122520) do
 
   create_table "wines", force: :cascade do |t|
     t.string   "short_description"
@@ -22,7 +22,6 @@ ActiveRecord::Schema.define(version: 20151126114804) do
     t.string   "company"
     t.string   "grape_type"
     t.boolean  "is_vegetarian"
-    t.integer  "picture_id"
     t.datetime "created_at",        null: false
     t.datetime "updated_at",        null: false
     t.string   "image_url"
