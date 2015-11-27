@@ -3709,3 +3709,129 @@ Processing by WinesController#index as HTML
   [1m[35mWine Load (1.4ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
   Rendered wines/index.html.erb within layouts/application (206.5ms)
 Completed 200 OK in 765ms (Views: 742.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-11-27 15:02:16 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWine Load (5.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered wines/show.html.erb within layouts/application (58.2ms)
+Completed 200 OK in 626ms (Views: 611.4ms | ActiveRecord: 5.0ms)
+
+
+Started POST "/basket_items?wine_id=2" for 127.0.0.1 at 2015-11-27 15:02:24 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"authenticity_token"=>"yeLdFpWpr3xHW5Xrg8BSezX4xRN+AT+5YWdjylmmKUDq6QShN3j3NFShdJ42NVQaoo0656+LoIFnUkv4RyQCCg==", "wine_id"=>"2"}
+  [1m[35mBasket Load (0.4ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35m (6.4ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "basket_items" ("wine_id", "basket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["wine_id", 2], ["basket_id", 2], ["created_at", "2015-11-27 15:02:25.093621"], ["updated_at", "2015-11-27 15:02:25.093621"]]
+  [1m[35m (184.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/baskets/2
+Completed 302 Found in 313ms (ActiveRecord: 192.2ms)
+
+
+Started GET "/baskets/2" for 127.0.0.1 at 2015-11-27 15:02:25 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mBasket Load (0.6ms)[0m  [1mSELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mBasketItem Load (0.9ms)[0m  SELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?  [["basket_id", 2]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mWine Load (4.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.2ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mWine Load (1.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 9]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 8]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 9]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered baskets/show.html.erb within layouts/application (315.6ms)
+Completed 200 OK in 1014ms (Views: 971.6ms | ActiveRecord: 10.7ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-11-27 15:02:33 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.4ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (185.4ms)
+Completed 200 OK in 565ms (Views: 551.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-11-27 15:06:39 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered wines/show.html.erb within layouts/application (86.7ms)
+Completed 200 OK in 1195ms (Views: 1187.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-11-27 15:07:12 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mWine Load (8.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 2]]
+  Rendered wines/show.html.erb within layouts/application (40.4ms)
+Completed 200 OK in 417ms (Views: 403.0ms | ActiveRecord: 8.0ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-11-27 15:07:40 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered wines/show.html.erb within layouts/application (32.9ms)
+Completed 200 OK in 655ms (Views: 649.8ms | ActiveRecord: 0.5ms)
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to QuantityFieldForBasketItems (20151127151702)
+  [1m[35m (0.4ms)[0m  begin transaction
+  [1m[36mSQL (2.7ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20151127151702"]]
+  [1m[35m (179.5ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.9ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.7ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.7ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to QuantityFieldForBasketItems (20151127151702)
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20151127151702"]]
+  [1m[36m (160.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (1.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.8ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_updated_at' AND type='index'
+[0m
+  [1m[35m (0.7ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_sessions_on_session_id' AND type='index'
+
+
+
+Started GET "/basket_items" for 127.0.0.1 at 2015-11-27 15:21:58 +0000
+Processing by BasketItemsController#index as HTML
+  [1m[36mBasketItem Load (20.2ms)[0m  [1mSELECT "basket_items".* FROM "basket_items"[0m
+  Rendered basket_items/index.html.erb within layouts/application (318.5ms)
+Completed 200 OK in 2060ms (Views: 1913.9ms | ActiveRecord: 48.9ms)
