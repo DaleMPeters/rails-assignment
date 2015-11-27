@@ -14,9 +14,8 @@
     <tr>
       <th></th>
       <th>Short description</th>
-      <th>Bottle size</th>
       <th>Price</th>
-      <th>Company</th>
+      <th>Supplier</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -26,14 +25,13 @@
       <tr>
         <td><%= link_to(image_tag(wine.image_url),
                        wine_path(wine, page: @wines.current_page)) %></td>
-        <td><%= wine.short_description %></td>
-        <td><%= wine.bottle_size %></td>
-        <td><%= wine.price %></td>
+        <td><%= wine.short_description + ' (' + wine.bottle_size + ')' %></td>
+        <td><%= number_to_currency wine.price, unit: "£" %></td>
         <td><%= wine.company %></td>
         <td><%= link_to 'Show', wine %></td>
         <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
         <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%#= button_to 'Add to Basket'%></td>
+        <td><%= button_to 'Add to Basket', basket_items_path(wine_id: wine) %></td>
       </tr>
     <% end %>
   </tbody>

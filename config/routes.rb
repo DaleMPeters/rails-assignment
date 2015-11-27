@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :basket_items
+  resources :baskets
   resources :wines
 
   # map.resources :wines

@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+# Use activerecord-session_store to store sessions
 gem 'activerecord-session_store'
 
 # For pagination of the wines in the listings page

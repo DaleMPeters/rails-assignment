@@ -40,13 +40,17 @@
 </p>
 
 <p>
-  <strong>Is vegetarian:</strong>
-  <%= @wine.is_vegetarian %>
+  <% if @wine.is_vegetarian %>
+    Suitable for vegetarians
+  <% end %>
 </p>
 
-<p>
-  <strong>Add to Basket</strong>
-</p>
+<!--<strong>Is vegetarian:</strong>-->
+<%#= @wine.is_vegetarian %>
+<!--</p>-->
 
+<%= number_field_tag 'quantity', '1', step: '1', min: '1' %>
+
+<%= link_to 'Add to Basket', basket_items_path(wine_id: @wine), method: :post %><br>
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
 <%= link_to 'Back', wines_path %>
