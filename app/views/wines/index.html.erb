@@ -14,14 +14,15 @@
     </p>
   <% end %>
   <%= link_to 'New Wine', new_wine_path %>
+  <%= link_to 'Register', new_customer_path %>
 
   <% @wines.each do |wine| %>
     <div class="col-md-12">
       <div class="thumbnail">
         <table class="table">
           <tr>
-            <td><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
-            <td>
+            <td class="col-md-3"><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
+            <td class="col-md-9">
               <table>
                 <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
                 <tr><td><%= number_to_currency wine.price, unit: "£"%></td></tr>

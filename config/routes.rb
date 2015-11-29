@@ -1,4 +1,12 @@
 Rails.application.routes.draw do
+  get 'sessions/new'
+  
+  # REFERENCE: https://www.railstutorial.org/book/log_in_log_out
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  delete 'logout' => 'sessions#destroy'
+
+  resources :customers
   resources :basket_items
   resources :baskets
   resources :wines
