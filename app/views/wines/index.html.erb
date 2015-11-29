@@ -29,7 +29,10 @@
                 <tr><td><%= link_to 'Show', wine %></td></tr>
                 <tr><td><%= link_to 'Edit', edit_wine_path(wine) %></td></tr>
                 <tr><td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
-                <tr><td><%= button_to 'Add to Basket', basket_items_path(wine_id: wine) %></td></tr>
+                <%= form_tag(basket_items_path(wine_id: wine), method: "post") do %>
+                  <tr><td><%= number_field_tag :quantity, params[:quantity], value: "1", min: "1", required: true %></td></tr>
+                  <tr><td><%= submit_tag "Add to Basket", name: nil %></td></tr>
+                <% end %>
               </table>
             </td>
           </tr>

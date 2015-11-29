@@ -1,22 +1,27 @@
 <% if notice %>
   <p id="notice"><%= notice %></p>
 <% end %>
-
-<h2>Your Shopping Basket</h2>
-<table>
-  <thead>
-    <td></td>
-    <td><strong>Short Description</strong></td>
-    <td><strong>Price</strong></td>
-  </thead>
-  <tbody>
-    <% @basket.basket_items.each do |item| %>
-      <tr>
-        <td><%= image_tag item.wine.image_url %>
-        <td><%= item.wine.short_description + "(" + item.wine.bottle_size + ")" %></td>
-        <td><%= number_to_currency item.wine.price, unit: "£" %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-<%= link_to 'Buy More!', wines_path %>
+<%= stylesheet_link_tag "bootstrap.css" %>
+<div class="container">
+    <h2>Your Shopping Basket</h2>
+        <% @basket.basket_items.each do |item| %>
+          <div class="col-md-12">
+            <div class="thumbnail">  
+              <table class="table">
+                <tr>
+                  <td class="col-md-3"><%= image_tag(item.wine.image_url) %></td>
+                  <td class="col-md-9">
+                    <table>
+                      <tr><td><h3><%= item.wine.short_description + " (" + item.wine.bottle_size + ")"%></h3></td></tr>
+                      <tr><td><%= item.quantity %></td></tr>
+                      <tr><td><%= number_to_currency item.wine.price, unit: "£" %></td></tr>
+                      <tr><td><%= link_to('Remove from basket', item, method: :delete, data: { confirm: 'Are you sure?' }) %></td></tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </div>
+          </div>
+        <% end %>
+    <%= link_to 'Buy More!', wines_path %>
+</div>

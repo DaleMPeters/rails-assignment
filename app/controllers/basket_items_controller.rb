@@ -24,15 +24,16 @@ class BasketItemsController < ApplicationController
   # POST /basket_items
   # POST /basket_items.json
   def create()
+    # Adapted from somewhere?
     @basket = get_user_basket
     wine = Wine.find(params[:wine_id])
     wine_quantity = params[:quantity]
-    @basket_item = @basket.basket_items.build(wine: wine)
-    # @basket_item = BasketItem.new(basket_item_params)
+
+    @basket_item = @basket.basket_items.build(wine: wine, quantity: wine_quantity)
 
     respond_to do |format|
       if @basket_item.save
-        format.html { redirect_to @basket_item.basket, notice: 'Basket item was successfully created.' }
+        format.html { redirect_to @basket_item.basket, notice: 'Product sucessfully added to basket' }
         format.json { render :show, status: :created, location: @basket_item }
       else
         format.html { render :new }
@@ -58,9 +59,13 @@ class BasketItemsController < ApplicationController
   # DELETE /basket_items/1
   # DELETE /basket_items/1.json
   def destroy
-    @basket_item.destroy
+    if @basket_item.quantity > 1
+      @basket_item.update_attribute(:quantity, @basket_item.quantity - 1)
+    else
+      @basket_item.destroy
+    end
     respond_to do |format|
-      format.html { redirect_to basket_items_url, notice: 'Basket item was successfully destroyed.' }
+      format.html { redirect_to :back, notice: 'Item removed from basket' }
       format.json { head :no_content }
     end
   end
