@@ -26,6 +26,7 @@ class BasketItemsController < ApplicationController
   def create()
     @basket = get_user_basket
     wine = Wine.find(params[:wine_id])
+    wine_quantity = params[:quantity]
     @basket_item = @basket.basket_items.build(wine: wine)
     # @basket_item = BasketItem.new(basket_item_params)
 
@@ -72,6 +73,6 @@ class BasketItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def basket_item_params
-      params.require(:basket_item).permit(:wine_id, :basket_id)
+      params.require(:basket_item).permit(:wine_id, :basket_id, :quantity)
     end
 end

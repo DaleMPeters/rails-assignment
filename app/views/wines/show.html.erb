@@ -42,12 +42,15 @@
   <% end %>
 </p>
 
-<!--<strong>Is vegetarian:</strong>-->
-<%#= @wine.is_vegetarian %>
-<!--</p>-->
+<!-- Adapted from https://richonrails.com/articles/building-a-shopping-cart-in-ruby-on-rails, accessed 27/11/15 -->
+<%#= form_for basket_item do |f| %>
+  <%#= f.number_field :quantity, value: '1', min: '1' %>
+  <%#= f.hidden_field :wine_id, value: @wine %>
+  <%#= f.submit "Add to Basket" %>
+<%# end %>
 
 <%= number_field_tag 'quantity', '1', step: '1', min: '1' %>
 
-<%= link_to 'Add to Basket', basket_items_path(wine_id: @wine), method: :post %><br>
+<%= link_to 'Add to Basket', basket_items_path(wine_id: @wine, quantity: :quantity), method: :post %><br>
 <%= link_to 'Edit', edit_wine_path(@wine) %> |
 <%= link_to 'Back', wines_path %>

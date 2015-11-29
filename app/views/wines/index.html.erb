@@ -1,43 +1,42 @@
 <p id="notice"><%= notice %></p>
+<%= stylesheet_link_tag "bootstrap.css" %>
 
-<h1>Listing Wines</h1>
+<div class="container">
+  <header class="jumbotron">
+    <h1>My Alcohol Free Wines</h1>
+  </header>
 
-<%= form_tag wines_path, :method => "get" do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
+  <!-- With adaptation from the search tutorial - see wines_controller -->
+  <%= form_tag wines_path, method: "get" do %>
+    <p>
+      <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", name: nil %>
+    </p>
+  <% end %>
+  <%= link_to 'New Wine', new_wine_path %>
 
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>Short description</th>
-      <th>Price</th>
-      <th>Supplier</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @wines.each do |wine| %>
-      <tr>
-        <td><%= link_to(image_tag(wine.image_url),
-                       wine_path(wine, page: @wines.current_page)) %></td>
-        <td><%= wine.short_description + ' (' + wine.bottle_size + ')' %></td>
-        <td><%= number_to_currency wine.price, unit: "£" %></td>
-        <td><%= wine.company %></td>
-        <td><%= link_to 'Show', wine %></td>
-        <td><%= link_to 'Edit', edit_wine_path(wine) %></td>
-        <td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-        <td><%= button_to 'Add to Basket', basket_items_path(wine_id: wine) %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<%= will_paginate @wines %>
-<br>
-
-<%= link_to 'New Wine', new_wine_path %>
+  <% @wines.each do |wine| %>
+    <div class="col-md-12">
+      <div class="thumbnail">
+        <table class="table">
+          <tr>
+            <td><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
+            <td>
+              <table>
+                <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
+                <tr><td><%= number_to_currency wine.price, unit: "£"%></td></tr>
+                <tr><td><%= wine.company %></td></tr>
+                <tr><td><%= link_to 'Show', wine %></td></tr>
+                <tr><td><%= link_to 'Edit', edit_wine_path(wine) %></td></tr>
+                <tr><td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
+                <tr><td><%= button_to 'Add to Basket', basket_items_path(wine_id: wine) %></td></tr>
+              </table>
+            </td>
+          </tr>
+        </table> 
+      </div>
+    </div>
+  <% end %>
+  <center><%= will_paginate @wines, renderer: BootstrapPagination::Rails %></center>
+  <br>
+</div>

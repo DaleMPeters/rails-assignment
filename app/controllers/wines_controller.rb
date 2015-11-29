@@ -5,9 +5,7 @@ class WinesController < ApplicationController
   # GET /wines.json
   def index
     # THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
-    @wines = Wine.search(params[:search]).order(:short_description).paginate(:page => params[:page], :per_page => 10)
-    # Sort the wines by short_description field and paginate the sorted results
-    # @wines = Wine.all.order(:short_description).paginate(:page => params[:page], :per_page => 10)
+    @wines = Wine.search(params[:search]).order(:short_description).paginate(page: params[:page], per_page: 6)
   end
 
   # GET /wines/1

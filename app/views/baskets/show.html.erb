@@ -3,10 +3,20 @@
 <% end %>
 
 <h2>Your Shopping Basket</h2>
-<ul>
-  <% @basket.basket_items.each do |item| %>
-    <li><%= item.wine.short_description %></li>
-  <% end %>
-</ul>
-
+<table>
+  <thead>
+    <td></td>
+    <td><strong>Short Description</strong></td>
+    <td><strong>Price</strong></td>
+  </thead>
+  <tbody>
+    <% @basket.basket_items.each do |item| %>
+      <tr>
+        <td><%= image_tag item.wine.image_url %>
+        <td><%= item.wine.short_description + "(" + item.wine.bottle_size + ")" %></td>
+        <td><%= number_to_currency item.wine.price, unit: "£" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 <%= link_to 'Buy More!', wines_path %>

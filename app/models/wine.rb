@@ -17,10 +17,6 @@ class Wine < ActiveRecord::Base
       end
       errors.add(:base, 'This product is in someone\'s cart, cannot destroy')
       return false
-      # else
-      #   errors.add(:base, 'This product is in someone\'s cart, cannot destroy')
-      #   return false
-      # end
     end
   #end
 end

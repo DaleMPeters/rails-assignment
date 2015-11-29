@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+gem 'will_paginate-bootstrap'
+
 # Use activerecord-session_store to store sessions
 gem 'activerecord-session_store'
 
