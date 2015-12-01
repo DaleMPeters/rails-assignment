@@ -1,20 +1,5 @@
-<p id="notice"><%= notice %></p>
-<%= stylesheet_link_tag "bootstrap.css" %>
-
-<div class="container">
-  <header class="jumbotron">
-    <h1>My Alcohol Free Wines</h1>
-  </header>
-
-  <!-- With adaptation from the search tutorial - see wines_controller -->
-  <%= form_tag wines_path, method: "get" do %>
-    <p>
-      <%= text_field_tag :search, params[:search] %>
-      <%= submit_tag "Search", name: nil %>
-    </p>
-  <% end %>
-  <%= link_to 'New Wine', new_wine_path %>
-  <%= link_to 'Register', new_customer_path %>
+<!-- With adaptation from the search tutorial - see wines_controller -->
+  <%#= link_to 'New Wine', new_wine_path %>
 
   <% @wines.each do |wine| %>
     <div class="col-md-12">
@@ -25,14 +10,15 @@
             <td class="col-md-9">
               <table>
                 <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
-                <tr><td><%= number_to_currency wine.price, unit: "£"%></td></tr>
+                <tr><td><%= number_to_currency wine.price, unit: "£" %></td></tr>
                 <tr><td><%= wine.company %></td></tr>
-                <tr><td><%= link_to 'Show', wine %></td></tr>
-                <tr><td><%= link_to 'Edit', edit_wine_path(wine) %></td></tr>
-                <tr><td><%= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %></td></tr>
+                <tr><td>&nbsp;</td></tr>
+                <!--<tr><td>--><%#= link_to 'Show', wine %><!--</td></tr>-->
+                <!--<tr><td>--><%#= link_to 'Edit', edit_wine_path(wine) %><!--</td></tr>-->
+                <!--<tr><td>--><%#= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %><!--</td></tr>-->
                 <%= form_tag(basket_items_path(wine_id: wine), method: "post") do %>
-                  <tr><td><%= number_field_tag :quantity, params[:quantity], value: "1", min: "1", required: true %></td></tr>
-                  <tr><td><%= submit_tag "Add to Basket", name: nil %></td></tr>
+                  <tr><td><%= number_field_tag(:quantity, params[:quantity], value: "1", min: "1", required: true) %>
+                <%= submit_tag "Add to Basket", name: nil %></td></tr>
                 <% end %>
               </table>
             </td>
@@ -41,6 +27,5 @@
       </div>
     </div>
   <% end %>
+  </div>
   <center><%= will_paginate @wines, renderer: BootstrapPagination::Rails %></center>
-  <br>
-</div>

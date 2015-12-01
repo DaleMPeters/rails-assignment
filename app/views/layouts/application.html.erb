@@ -1,14 +1,36 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>MyAlcoholFreeWines</title>
+  <title>My Alcohol Free Wines</title>
+  <%= stylesheet_link_tag "bootstrap.css" %>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-
-<%= yield %>
-
+<div class="container">
+  <p id="notice"><%= notice %></p>
+  <header class="jumbotron">
+    <h1>My Alcohol Free Wines</h1>
+  </header>
+  <div class="col-md-6">
+    <% if customer_is_logged_in? %>
+      <p><%= logged_in_customer.name %> | <%= link_to('Logout', logout_path, method: :delete) %> </p>
+    <% else %>
+      <p><%= link_to('Login', login_path) %> | <%= link_to('Register', new_customer_path) %></p>
+    <% end %>
+  </div>
+  <div class="col-md-6"><span class="pull-right">
+      <%= form_tag wines_path, method: "get" do %>
+        <p>
+          <%= text_field_tag :search, params[:search], placeholder: "Search Wines..." %>
+          <%= submit_tag "Search", name: nil %>
+        </p>
+      <% end %>
+    </span>
+  </div>
+  
+  <%= yield %>
+</div>
 </body>
 </html>

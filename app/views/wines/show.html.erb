@@ -1,58 +1,29 @@
-<p id="notice"><%= notice %></p>
-
-<p>
-  <%= image_tag @wine.image_url %>
-</p>
-
-<h2><%= @wine.short_description %></h2>
-
-<p>
-  <strong>Bottle size:</strong>
-  <%= @wine.bottle_size %>
-</p>
-
-<p>
-  <strong>Price:</strong>
-  <%= @wine.price %>
-</p>
-
-<p>
-  <strong>Long description:</strong>
-  <%= @wine.long_description %>
-</p>
-
-<p>
-  <strong>Origin country:</strong>
-  <%= @wine.origin_country %>
-</p>
-
-<p>
-  <strong>Company:</strong>
-  <%= @wine.company %>
-</p>
-
-<p>
-  <strong>Grape type:</strong>
-  <%= @wine.grape_type %>
-</p>
-
-<p>
-  <% if @wine.is_vegetarian %>
-    Suitable for vegetarians
-  <% end %>
-</p>
-
-<%= form_tag(basket_items_path(wine_id: @wine), method: "post") do %>
-  <p>
-    <%= number_field_tag :quantity, params[:quantity], value: "1", min: "1", required: true %>
-    <%= submit_tag "Add to Basket", name: nil %>
-  </p>
-<% end %>
-  
-
-
-<%#= number_field_tag 'quantity', '1', step: '1', min: '1' %>
-
-<%= link_to 'Add to Basket', basket_items_path(wine_id: @wine, quantity: :quantity), method: :post %><br>
-<%= link_to 'Edit', edit_wine_path(@wine) %> |
-<%= link_to 'Back', wines_path %>
+<div class="col-md-12">
+  <div class="thumbnail">
+    <table class="table">
+      <tr>
+        <td>
+          <%= image_tag(@wine.image_url, width: 400) %>
+        </td>
+        <td>
+          <table>
+            <tr><td><h3><%= @wine.short_description + " (" + @wine.short_description + ")" %></h2></td></tr>
+            <tr><td><%= number_to_currency(@wine.price, unit: "£") %></td></tr>
+            <tr><td><%= @wine.long_description %></td></tr>
+            <tr><td><strong>Origin: </strong><%= @wine.origin_country %></td></tr>
+            <tr><td><strong>Supplier: </strong><%= @wine.company %></td></tr>
+            <tr><td><strong>Grape type: </strong><%= @wine.grape_type %></td></tr>
+            <tr><td>&nbsp;</td></tr>
+            <tr><td>
+              <%= form_tag(basket_items_path(wine_id: @wine), method: "post") do %>
+                <%= number_field_tag :quantity, params[:quantity], value: "1", min: "1", required: true %>
+                <%= submit_tag "Add to Basket", name: nil %>
+              <% end %>
+            </td></tr>
+            <tr><td><%= link_to 'Edit', edit_wine_path(@wine) %> | <%= link_to 'Back', wines_path %></td></tr>
+          </table>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>

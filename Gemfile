@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+gem 'rest-client'
+
+gem 'bcrypt'
+
 gem 'will_paginate-bootstrap'
 
 # Use activerecord-session_store to store sessions

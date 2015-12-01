@@ -1,13 +1,14 @@
-<!-- REFERENCE: https://www.railstutorial.org/book/log_in_log_out, accessed 29 Nov 15 -->
+<%= notice %>
 
 <h1>My Alcohol Free Wines - Login</h1>
 
-<%= form_for(:session, url: login_path) do |form_element| %>
+<!-- REFERENCE: https://www.railstutorial.org/book/log_in_log_out, accessed 29 Nov 15 -->
+<%= form_for(:session, url: login_path, method: "post") do |form_element| %>
   <%= form_element.label :email %>
   <%= form_element.email_field :email %>
 
   <%= form_element.label :password %>
   <%= form_element.password_field :password %>
 
-  <%= form_element.submit "Log in" %>
+  <%= form_element.submit "Log in", name: nil %>
 <% end %>
