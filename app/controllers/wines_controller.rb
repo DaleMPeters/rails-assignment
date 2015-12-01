@@ -1,10 +1,21 @@
 class WinesController < ApplicationController
+  require 'rest_client'
+  API_ROOT = "http://localhost:5000/"
+
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
 
   # GET /wines
   # GET /wines.json
   def index
-    # THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
+    # index_url = "#{API_ROOT}wines/"
+  
+    # wines_response = RestClient.get index_url
+
+    # @wines = JSON.parse(wines_response)
+    # puts @wines
+
+
+    # REFERENCE THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
     @wines = Wine.search(params[:search]).order(:short_description).paginate(page: params[:page], per_page: 6)
   end
 
