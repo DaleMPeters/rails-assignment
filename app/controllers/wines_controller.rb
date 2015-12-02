@@ -7,13 +7,33 @@ class WinesController < ApplicationController
   # GET /wines
   # GET /wines.json
   def index
-    # index_url = "#{API_ROOT}wines/"
-  
-    # wines_response = RestClient.get index_url
+    # TODO Need some way of only inserting the thing to the database if
+    # it's not already in there - perhaps do this with a unique identifier
+    #
+    # find_by_ISBN for example. if this returns something other than nil, don't add it
+    #
+    # Wine.delete_all
+    #
+    # Need to also get the wines from the other supplier and only display the cheapest wine
 
-    # @wines = JSON.parse(wines_response)
-    # puts @wines
+    index_url = "#{API_ROOT}wines/"
+    raw_response = RestClient.get(index_url)
 
+    jsonised_response = JSON.parse(raw_response)
+
+    for item in jsonised_response['wines'] do
+      new_wine = Wine.new
+      new_wine.short_description = item['short_description']
+      new_wine.bottle_size = item['bottle_size']
+      new_wine.price = item['price']
+      new_wine.long_description = item['long_description']
+      new_wine.origin_country = item['origin_country']
+      new_wine.company = item['company']
+      new_wine.grape_type = item['grape_type']
+      new_wine.is_vegetarian = item['is_vegetarian']
+      new_wine.image_url = item['image_url']
+      new_wine.save
+    end
 
     # REFERENCE THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
     @wines = Wine.search(params[:search]).order(:short_description).paginate(page: params[:page], per_page: 6)
