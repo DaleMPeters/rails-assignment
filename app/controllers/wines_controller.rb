@@ -10,7 +10,9 @@ class WinesController < ApplicationController
     # TODO Need some way of only inserting the thing to the database if
     # it's not already in there - perhaps do this with a unique identifier
     #
-    # find_by_ISBN for example. if this returns something other than nil, don't add it
+    # result_wine = find_by_ISBN(isbn: isbn)
+    # if result_wine == nil or result_wine.price > this_wine.price
+    #   add_wine_to_database
     #
     # Wine.delete_all
     #
@@ -22,17 +24,21 @@ class WinesController < ApplicationController
     jsonised_response = JSON.parse(raw_response)
 
     for item in jsonised_response['wines'] do
-      new_wine = Wine.new
-      new_wine.short_description = item['short_description']
-      new_wine.bottle_size = item['bottle_size']
-      new_wine.price = item['price']
-      new_wine.long_description = item['long_description']
-      new_wine.origin_country = item['origin_country']
-      new_wine.company = item['company']
-      new_wine.grape_type = item['grape_type']
-      new_wine.is_vegetarian = item['is_vegetarian']
-      new_wine.image_url = item['image_url']
-      new_wine.save
+      result_wine = Wine.find_by(barcode: item['barcode'])
+      if result_wine == nil
+        new_wine = Wine.new
+        new_wine.short_description = item['short_description']
+        new_wine.bottle_size = item['bottle_size']
+        new_wine.price = item['price']
+        new_wine.long_description = item['long_description']
+        new_wine.origin_country = item['origin_country']
+        new_wine.company = item['company']
+        new_wine.grape_type = item['grape_type']
+        new_wine.is_vegetarian = item['is_vegetarian']
+        new_wine.image_url = item['image_url']
+        new_wine.barcode = item['barcode']
+        new_wine.save
+      end
     end
 
     # REFERENCE THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
