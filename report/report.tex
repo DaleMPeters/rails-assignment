@@ -1,0 +1,81 @@
+\documentclass[a4paper,12pt,hidelinks]{report}
+\usepackage{graphicx}
+\usepackage[parfill]{parskip}
+\usepackage[backend=bibtex,style=ieee]{biblatex}
+\usepackage{fancyhdr}
+\usepackage[top=3cm,bottom=3cm,left=3cm,right=3cm,headheight=15pt]{geometry}
+\usepackage{gentium}
+\usepackage{titlesec}
+\usepackage{placeins}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{textcomp}
+\usepackage[UKenglish]{isodate}
+\usepackage{blindtext}
+\usepackage{pdflscape}
+
+\usepackage[pdftex,pdfauthor={Dale Mark Peters (Student Number 120062861)},pdftitle={SE31520 Assignment Documentation | Aberystwyth University},pdfcreator={pdflatex}]{hyperref}
+
+\title{SE31520 Assignment Report}
+\author{Dale Mark Peters}
+\graphicspath{{/home/dale/university/se31520/assignment/report/images/}}
+
+\bibliography{bibliography}
+\captionsetup{width=0.8\textwidth,font={small}}
+
+\titleformat
+{\chapter}
+[block]
+{\bfseries\huge}
+{\thechapter}
+{3ex}
+{}
+[]
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead[LO]{\leftmark}
+\rhead[RE]{\rightmark}
+\cfoot{\thepage}
+\begin{document}
+
+\maketitle
+
+\newgeometry{left=4cm,right=4cm}
+\renewcommand{\abstractname}{Acknowledgements}
+\begin{abstract}
+\end{abstract}
+\restoregeometry
+
+\tableofcontents\newpage
+\chapter{Introduction}
+    \blindtext
+\chapter{Design/Architecture}
+    \section{My Alcohol Free Wines}
+    \blindtext
+    \section{RESTful Supplier Web Services}
+    \blindtext
+\chapter{Testing}
+    \section{Test Strategy}
+
+    \newpage
+    \begin{landscape}
+        \section{Test Results}
+        \begin{center}
+            \begin{tabular}{ |c|c|c|c|c|c|c|c| } 
+                \hline
+                \textbf{Test ID} & R\textbf{equirement} & D\textbf{escription} & I\textbf{nputs} & E\textbf{xpected Outputs} & A\textbf{ctual Outputs} & P\textbf{ass/Fail} & \textbf{Comments}
+                \\\hline\hline
+                1 & Requirement & Description & Inputs & Expected Outputs & Actual Outputs & Pass/Fail & Comments\\ 
+                \hline
+            \end{tabular}
+        \end{center}
+    \end{landscape}
+
+    \blindtext
+\chapter{Self Evaluation}
+    \blindtext
+
+\printbibliography
+
+\end{document}
