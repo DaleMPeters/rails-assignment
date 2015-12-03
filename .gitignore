@@ -14,14 +14,15 @@
 # Ignore all logfiles and tempfiles.
 /log/*
 !/log/.keep
-/tmp
+*/tmp
 
 *.sw*
 
-*.pdf
-*.log
-*.out
-*.aux
+*/*.pdf
+*/*.log
+*/*.out
+*/*.aux
+*/*.fdb*
 
 
 .idea/
