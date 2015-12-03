@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'orders/create'
+
+  get 'orders/new'
+
   get 'sessions/new'
   
   # REFERENCE: https://www.railstutorial.org/book/log_in_log_out
@@ -6,6 +10,7 @@ Rails.application.routes.draw do
   post 'login' => 'sessions#create'
   delete 'logout' => 'sessions#destroy'
 
+  resources :orders, :only => [:new, :create]
   resources :customers
   resources :basket_items
   resources :baskets

@@ -20,4 +20,4 @@
     </div>
   <% end %>
 <% end %>
-<p><%= link_to('Buy More!', wines_path)%> | <%=link_to('Checkout') %> </p>
+<p><%= link_to('Buy More!', wines_path)%> | <%=link_to('Checkout', orders_path, method: :post) %> </p>
