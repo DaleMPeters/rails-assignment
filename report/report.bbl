@@ -16,6 +16,38 @@
   {}
 \endgroup
 
+\entry{flask-framework}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Ronacher}{R.}%
+     {Armin}{A.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RA1}
+  \strng{fullhash}{RA1}
+  \field{howpublished}{Available \url{http://flask.pocoo.org/}}
+  \field{note}{[Accessed: 23 Nov 2015]}
+  \field{title}{{Flask} {Framework}}
+\endentry
+
+\entry{flask-tutorial}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Rei}{R.}%
+     {Luis}{L.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{RL1}
+  \strng{fullhash}{RL1}
+  \field{howpublished}{Available
+  \url{http://blog.luisrei.com/articles/flaskrest.html}}
+  \field{note}{[Accessed: 23 Nov 2015]}
+  \field{title}{{Implementing} a {RESTful} {Web} {API} with {Python} \&
+  {Flask}}
+\endentry
+
 \lossort
 \endlossort
 

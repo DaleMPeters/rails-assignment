@@ -43227,3 +43227,38 @@ Processing by BasketsController#show as HTML
   Rendered baskets/show.html.erb within layouts/application (22.4ms)
   [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 2]]
 Completed 200 OK in 629ms (Views: 596.8ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=some" for 127.0.0.1 at 2015-12-04 23:41:06 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.9ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"some"}
+Completed 500 Internal Server Error in 183ms (ActiveRecord: 0.0ms)
+
+Errno::ECONNREFUSED (Connection refused - connect(2) for "localhost" port 5000):
+  app/controllers/wines_controller.rb:22:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (68.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (20.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (240.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (5.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (8.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (178.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (368.6ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search=some" for 127.0.0.1 at 2015-12-04 23:41:35 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search"=>"some"}
+  [1m[35mWine Load (9.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (7.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%some%')  ORDER BY "wines"."short_description" ASC LIMIT 6 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (2127.5ms)
+  [1m[36mCustomer Load (12.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 3917ms (Views: 3546.9ms | ActiveRecord: 33.5ms)
