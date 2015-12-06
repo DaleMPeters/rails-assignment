@@ -31,24 +31,16 @@
   \field{title}{{Flask} {Framework}}
 \endentry
 
-\entry{flask-tutorial}{misc}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Rei}{R.}%
-     {Luis}{L.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{RL1}
-  \strng{fullhash}{RL1}
-  \field{howpublished}{Available
-  \url{http://blog.luisrei.com/articles/flaskrest.html}}
-  \field{note}{[Accessed: 23 Nov 2015]}
-  \field{title}{{Implementing} a {RESTful} {Web} {API} with {Python} \&
-  {Flask}}
+\entry{gems}{misc}{}
+  \field{howpublished}{Available \url{https://rubygems.org/gems/}}
+  \field{note}{[Accessed 6 Dec 2015]}
+  \field{title}{Ruby {Gems}}
 \endentry
 
 \entry{bootstrap}{misc}{}
+  \field{howpublished}{Available
+  \url{http://getbootstrap.com/getting-started/\#download}}
+  \field{note}{[Accessed: 30 Nov 2015]}
   \field{title}{Bootstrap}
 \endentry
 
@@ -66,6 +58,22 @@
   \url{https://commons.wikimedia.org/wiki/File:Red_wine_closeup_in_glass.jpg}}
   \field{note}{[Accessed: 26 Nov 2015]}
   \field{title}{Red {Wine} {Image}}
+\endentry
+
+\entry{online-ruby-book}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hartl}{H.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{howpublished}{Available
+  \url{https://www.railstutorial.org/book/log_in_log_out}}
+  \field{note}{[Accessed: 30 Nov 2015]}
+  \field{title}{Ruby on {Rails} {Tutorial} 3rd {Edition}}
 \endentry
 
 \entry{agile-web-dev}{book}{}
@@ -103,22 +111,6 @@
   \field{edition}{4}
   \field{isbn}{9781934356548}
   \field{year}{2011}
-\endentry
-
-\entry{online-ruby-book}{misc}{}
-  \name{author}{1}{}{%
-    {{}%
-     {Hartl}{H.}%
-     {Michael}{M.}%
-     {}{}%
-     {}{}}%
-  }
-  \strng{namehash}{HM1}
-  \strng{fullhash}{HM1}
-  \field{howpublished}{Available
-  \url{https://www.railstutorial.org/book/log_in_log_out}}
-  \field{note}{[Accessed: 30 Nov 2015]}
-  \field{title}{Ruby on {Rails} {Tutorial} 3rd {Edition}}
 \endentry
 
 \lossort

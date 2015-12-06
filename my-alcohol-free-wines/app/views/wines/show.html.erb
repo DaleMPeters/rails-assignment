@@ -9,13 +9,16 @@
         </td>
         <td>
           <table>
-            <tr><td><h3><%= @wine.short_description + " (" + @wine.short_description + ")" %></h2></td></tr>
+            <tr><td><h3><%= @wine.short_description + " (" + @wine.bottle_size + ")" %></h2></td></tr>
             <% # Convert the float containing the price to a currency for readability %>
             <tr><td><%= number_to_currency(@wine.price, unit: "£") %></td></tr>
             <tr><td><%= @wine.long_description %></td></tr>
             <tr><td><strong>Origin: </strong><%= @wine.origin_country %></td></tr>
             <tr><td><strong>Supplier: </strong><%= @wine.company %></td></tr>
             <tr><td><strong>Grape type: </strong><%= @wine.grape_type %></td></tr>
+            <% if @wine.is_vegetarian %>
+              <tr><td>Suitable for Vegetarians</td></tr>
+            <% end %>
             <tr><td>&nbsp;</td></tr>
             <tr><td>
               <% # Generate a number field tag in a form so the user can change the quantity of the wine they want %>

@@ -15,53 +15,47 @@ Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Database file #1: report-blx.bib
 Database file #2: bibliography.bib
-I was expecting a `,' or a `}'---line 15 of file bibliography.bib
- :     
- :     howpublished={Available \url{http://getbootstrap.com/getting-started/#download}},
-(Error may have been on previous line)
-I'm skipping whatever remains of this entry
 Biblatex version: 2.9
 Reallocated singl_function (elt_size=4) to 100 items from 50.
 Reallocated wiz_functions (elt_size=4) to 9000 items from 6000.
 You've used 7 entries,
             6047 wiz_defined-function locations,
-            1156 strings with 8825 characters,
-and the built_in function-call counts, 15835 in all, are:
-= -- 596
-> -- 492
-< -- 122
-+ -- 158
-- -- 177
-* -- 883
-:= -- 1065
+            1157 strings with 8821 characters,
+and the built_in function-call counts, 14970 in all, are:
+= -- 554
+> -- 421
+< -- 114
++ -- 145
+- -- 156
+* -- 807
+:= -- 961
 add.period$ -- 0
 call.type$ -- 7
-change.case$ -- 52
+change.case$ -- 48
 chr.to.int$ -- 34
 cite$ -- 12
-duplicate$ -- 1765
-empty$ -- 1799
-format.name$ -- 275
-if$ -- 3652
+duplicate$ -- 1687
+empty$ -- 1762
+format.name$ -- 230
+if$ -- 3464
 int.to.chr$ -- 0
-int.to.str$ -- 13
+int.to.str$ -- 12
 missing$ -- 0
-newline$ -- 123
-num.names$ -- 214
-pop$ -- 1973
+newline$ -- 116
+num.names$ -- 176
+pop$ -- 1968
 preamble$ -- 1
-purify$ -- 66
+purify$ -- 60
 quote$ -- 0
-skip$ -- 954
+skip$ -- 880
 stack$ -- 0
-substring$ -- 278
-swap$ -- 505
-text.length$ -- 126
+substring$ -- 273
+swap$ -- 492
+text.length$ -- 117
 text.prefix$ -- 0
 top$ -- 1
 type$ -- 254
 warning$ -- 0
-while$ -- 123
+while$ -- 110
 width$ -- 0
-write$ -- 115
-(There was 1 error message)
+write$ -- 108
