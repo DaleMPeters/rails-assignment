@@ -13,6 +13,10 @@ class CustomersController < ApplicationController
   end
 
   # GET /customers/new
+  #
+  # Method to be run when a GET request is made to customers_path/new.
+  #
+  # Will render a sign in form for a new customer
   def new
     @customer = Customer.new
   end
@@ -23,6 +27,8 @@ class CustomersController < ApplicationController
 
   # POST /customers
   # POST /customers.json
+  #
+  # Method to be run when a POST request is made to customers_path
   def create
     @customer = Customer.new(customer_params)
 

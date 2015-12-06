@@ -1,6 +1,7 @@
 <h2>Your Shopping Basket</h2>
+<%# For each item the user has added to the basket, render a html div (style for which is defined in third party bootstrap css) %>
 <% @basket.basket_items.each do |item| %>
-  <% if item.wine != nil %>
+  <% if item.wine != nil %> <%# Check the basket item has a product has a wine associated with it %>
     <div class="col-md-12">
       <div class="thumbnail">  
         <table class="table">
@@ -10,7 +11,9 @@
               <table>
                 <tr><td><h3><%= item.wine.short_description + " (" + item.wine.bottle_size + ")"%></h3></td></tr>
                 <tr><td><%= item.quantity %></td></tr>
-                <tr><td><%= number_to_currency item.wine.price, unit: "£" %></td></tr>
+                <%# Convert the number representing a currency to an actual currency, more human readable %>
+                <tr><td><%= number_to_currency(item.wine.price, unit: "£") %></td></tr>
+                <%# Provide a link to remove the item from the basket and ask if they're sure first %>
                 <tr><td><%= link_to('Remove from basket', item, method: :delete, data: { confirm: 'Are you sure?' }) %></td></tr>
               </table>
             </td>
@@ -20,4 +23,5 @@
     </div>
   <% end %>
 <% end %>
+<% #Provide a link to go back and buy more wine or to check the order out %>
 <p><%= link_to('Buy More!', wines_path)%> | <%=link_to('Checkout', orders_path, method: :post) %> </p>

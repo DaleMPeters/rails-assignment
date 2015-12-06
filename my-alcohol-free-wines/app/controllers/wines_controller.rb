@@ -1,11 +1,26 @@
 class WinesController < ApplicationController
+  
+  # Use rest_client gem to get the Wines from the third party suppliers
   require 'rest_client'
-  API_ROOT = "http://localhost:5000/"
+
+  # Define constant to contain the wines URL for the first web service
+  WINES_SUPPLIER_1_URL = "http://localhost:5000/wines/"
+
+  # Define constant to contain the wines URL for the second web service
+  WINES_SUPPLIER_2_URL = "http://localhost:5001/wines/"
 
   before_action :set_wine, only: [:show, :edit, :update, :destroy]
 
   # GET /wines
   # GET /wines.json
+  #
+  # Method to be run when a GET request is made to wines_path.
+  #
+  # Makes a request to the web service and retrieves a JSON list of all the wines
+  # sold by the supplier. Result is parsed to JSON and the JSON is looped over.
+  # Each wines is looked for by barcode in the database and if it isn't in the data
+  # base already, it is added. All the wines are then passed to the wine index view
+  # so that the user can see them.
   def index
     # TODO Need some way of only inserting the thing to the database if
     # it's not already in there - perhaps do this with a unique identifier
@@ -18,14 +33,23 @@ class WinesController < ApplicationController
     #
     # Need to also get the wines from the other supplier and only display the cheapest wine
 
-    index_url = "#{API_ROOT}wines/"
-    raw_response = RestClient.get(index_url)
+    # Make a GET request to the URL using the third party gem "rest_client"
+    raw_response = RestClient.get(WINES_SUPPLIER_1_URL)
 
+    # Convert the result of the request to JSON
     jsonised_response = JSON.parse(raw_response)
 
+    # For each item in the received JSON
     for item in jsonised_response['wines'] do
+      
+      # Try and find the current wine from the JSON object in the wines table by
+      # looking for one with an identical barcode
       result_wine = Wine.find_by(barcode: item['barcode'])
+
+      # if the resultant wine is nil, that means none were found and we need to add it to
+      # the wines tables, with all the other information
       if result_wine == nil
+        # Create new wine object and set its attributes to those from the JSON object
         new_wine = Wine.new
         new_wine.short_description = item['short_description']
         new_wine.bottle_size = item['bottle_size']
@@ -37,16 +61,20 @@ class WinesController < ApplicationController
         new_wine.is_vegetarian = item['is_vegetarian']
         new_wine.image_url = item['image_url']
         new_wine.barcode = item['barcode']
+
+        # Save the wine to the database table when the attributes have been set
         new_wine.save
       end
     end
-
-    # REFERENCE THIS LINE IS FROM http://railscasts.com/episodes/37-simple-search-form?autoplay=true
-    @wines = Wine.search(params[:search]).order(:short_description).paginate(page: params[:page], per_page: 6)
+    
+    # Now look for the wines needed, passing the search query from the view to the Wine model 
+    @wines = Wine.search(params[:search_query]).order(:short_description).paginate(page: params[:page], per_page: 10)
   end
 
   # GET /wines/1
   # GET /wines/1.json
+  #
+  # Method to be run when a GET request is made to wines_path/<wine_id>
   def show
   end
 

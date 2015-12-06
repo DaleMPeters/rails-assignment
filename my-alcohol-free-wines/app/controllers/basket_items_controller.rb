@@ -23,12 +23,26 @@ class BasketItemsController < ApplicationController
 
   # POST /basket_items
   # POST /basket_items.json
+  # Method to be run when a post request is made to basket_items. Gets the user's
+  # basket to store the wine in, tries to find the wine that the user has selected to
+  # add to their basket by its wine_id from the wines table of the database and builds
+  # a relationship between the basket_id and the wine_id and the quantity of the wine the user wants.
+  # Then gives the customer a message saying the wine was successfully added to the basket.
+  #
+  # Method adapted from "Agile Web Development with Rails" (4th Edition) by Sam Ruby et al.,
+  # chapter 9.
   def create()
-    # Adapted from somewhere?
+    # Try and get the logged in user's basket from the session hash
     @basket = get_user_basket
+
+    # Try and find the wine the customer has tried to add to their basket
     wine = Wine.find(params[:wine_id])
+
+    # Get the quantity of the wine they want to add to their basket from
+    # the request parameters
     wine_quantity = params[:quantity]
 
+    # Build a relationship between the wine_id and its quantity and the basket_id
     @basket_item = @basket.basket_items.build(wine: wine, quantity: wine_quantity)
 
     respond_to do |format|
@@ -55,13 +69,22 @@ class BasketItemsController < ApplicationController
       end
     end
   end
-
+  
   # DELETE /basket_items/1
   # DELETE /basket_items/1.json
+  #
+  # Method to be run when the customer tries to remove items from their
+  # basket. This is run when a DELETE request is made to /basket_items/<id>
+  # Looks to see if the quantity of the item in the basket is over 1 and
+  # if so, reduces the quantity by one. Otherwise, destroys the link between the basket
+  # and the wine item completely.
   def destroy
+    # Check if the quantity of the basket item the user wants to remove from their
+    # basket is greater than 1. If so, reduce the quantity by 1.
     if @basket_item.quantity > 1
       @basket_item.update_attribute(:quantity, @basket_item.quantity - 1)
     else
+      # Otherwuse, destroy the link between the basket and the wine
       @basket_item.destroy
     end
     respond_to do |format|

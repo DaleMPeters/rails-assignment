@@ -1,31 +1,31 @@
-<!-- With adaptation from the search tutorial - see wines_controller -->
-  <%#= link_to 'New Wine', new_wine_path %>
-
-  <% @wines.each do |wine| %>
-    <div class="col-md-12">
-      <div class="thumbnail">
-        <table class="table">
-          <tr>
-            <td class="col-md-3"><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
-            <td class="col-md-9">
-              <table>
-                <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
-                <tr><td><%= number_to_currency wine.price, unit: "£" %></td></tr>
-                <tr><td><%= wine.company %></td></tr>
-                <tr><td>&nbsp;</td></tr>
-                <!--<tr><td>--><%#= link_to 'Show', wine %><!--</td></tr>-->
-                <!--<tr><td>--><%#= link_to 'Edit', edit_wine_path(wine) %><!--</td></tr>-->
-                <!--<tr><td>--><%#= link_to 'Destroy', wine, method: :delete, data: { confirm: 'Are you sure?' } %><!--</td></tr>-->
-                <%= form_tag(basket_items_path(wine_id: wine), method: "post") do %>
-                  <tr><td><%= number_field_tag(:quantity, params[:quantity], value: "1", min: "1", required: true) %>
-                <%= submit_tag "Add to Basket", name: nil %></td></tr>
-                <% end %>
-              </table>
-            </td>
-          </tr>
-        </table> 
-      </div>
+<% # For each wine in the list, render page with the information about it listed %>
+<% @wines.each do |wine| %>
+  <div class="col-md-12">
+    <div class="thumbnail">
+      <table class="table">
+        <tr>
+          <% # Provide image of the wine with a link to the 'show' page for the wine %>
+          <td class="col-md-3"><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
+          <td class="col-md-9">
+            <table>
+              <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
+              <tr><td><%= number_to_currency(wine.price, unit: "£") %></td></tr>
+              <tr><td><%= wine.company %></td></tr>
+              <% # Link to page displaying all information about the wine %>
+              <tr><td><%= link_to 'More Details', wine %></td></tr>
+              <tr><td>&nbsp;</td></tr>
+              <% # Provide a quantity field in a form for the customer to specify how much of the wine they want %>
+              <%= form_tag(basket_items_path(wine_id: wine), method: "post") do %>
+                <tr><td><%= number_field_tag(:quantity, params[:quantity], value: "1", min: "1", required: true) %>
+                <%= submit_tag("Add to Basket", name: nil) %></td></tr>
+              <% end %>
+            </table>
+          </td>
+        </tr>
+      </table> 
     </div>
-  <% end %>
   </div>
-  <center><%= will_paginate @wines, renderer: BootstrapPagination::Rails %></center>
+<% end %>
+</div>
+<% # Provide pagination widget to allow the customer to navigate between pages. This is supplied by the third party ruby gem for Bootstrap style pagination %>
+<center><%= will_paginate @wines, renderer: BootstrapPagination::Rails %></center>

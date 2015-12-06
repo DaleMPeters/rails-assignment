@@ -1,3 +1,4 @@
+<%# Form the customer uses to register their details into the system when registering %>
 <%= form_for(@customer) do |f| %>
   <% if @customer.errors.any? %>
     <div id="error_explanation">
@@ -28,7 +29,7 @@
     <%= f.password_field :password %>
   </div>
   <div class="field" %>
-  <%= f.label :password_confirmation, "Confirm password" %><br>
+    <%= f.label :password_confirmation, "Confirm password" %><br>
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">

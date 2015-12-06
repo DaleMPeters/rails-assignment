@@ -48,6 +48,79 @@
   {Flask}}
 \endentry
 
+\entry{bootstrap}{misc}{}
+  \field{title}{Bootstrap}
+\endentry
+
+\entry{wine-image}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Dombrowski}{D.}%
+     {Quinn}{Q.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{DQ1}
+  \strng{fullhash}{DQ1}
+  \field{howpublished}{Available
+  \url{https://commons.wikimedia.org/wiki/File:Red_wine_closeup_in_glass.jpg}}
+  \field{note}{[Accessed: 26 Nov 2015]}
+  \field{title}{Red {Wine} {Image}}
+\endentry
+
+\entry{agile-web-dev}{book}{}
+  \true{moreauthor}
+  \name{author}{3}{}{%
+    {{}%
+     {Ruby}{R.}%
+     {Sam}{S.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Thomas}{T.}%
+     {Dave}{D.}%
+     {}{}%
+     {}{}}%
+    {{}%
+     {Hansson}{H.}%
+     {David}{D.}%
+     {}{}%
+     {}{}}%
+  }
+  \name{editor}{1}{}{%
+    {{}%
+     {Pfalzer}{P.}%
+     {Susannah~Davidson}{S.~D.}%
+     {}{}%
+     {}{}}%
+  }
+  \list{publisher}{1}{%
+    {Pragmatic Bookshelf}%
+  }
+  \strng{namehash}{RSTDHD+1}
+  \strng{fullhash}{RSTDHD+1}
+  \field{booktitle}{Agile Web Development with Rails}
+  \field{edition}{4}
+  \field{isbn}{9781934356548}
+  \field{year}{2011}
+\endentry
+
+\entry{online-ruby-book}{misc}{}
+  \name{author}{1}{}{%
+    {{}%
+     {Hartl}{H.}%
+     {Michael}{M.}%
+     {}{}%
+     {}{}}%
+  }
+  \strng{namehash}{HM1}
+  \strng{fullhash}{HM1}
+  \field{howpublished}{Available
+  \url{https://www.railstutorial.org/book/log_in_log_out}}
+  \field{note}{[Accessed: 30 Nov 2015]}
+  \field{title}{Ruby on {Rails} {Tutorial} 3rd {Edition}}
+\endentry
+
 \lossort
 \endlossort
 

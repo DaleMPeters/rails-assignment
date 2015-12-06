@@ -1,3 +1,4 @@
+<%# Holds the definition of the layout of a general page in order to promote consistency %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@
   <div class="col-md-6"><span class="pull-right">
       <%= form_tag wines_path, method: "get" do %>
         <p>
-          <%= text_field_tag :search, params[:search], placeholder: "Search Wines..." %>
+          <%= text_field_tag :search_query, params[:search_query], placeholder: "Search Wines..." %>
           <%= submit_tag "Search", name: nil %>
         </p>
       <% end %>

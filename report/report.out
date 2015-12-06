@@ -1,13 +1,25 @@
 \BOOKMARK [0][-]{chapter.1}{Introduction}{}% 1
 \BOOKMARK [0][-]{chapter.2}{Design/Architecture}{}% 2
-\BOOKMARK [1][-]{section.2.1}{Data Structures}{chapter.2}% 3
+\BOOKMARK [1][-]{section.2.1}{Data Models \(Classes\)}{chapter.2}% 3
 \BOOKMARK [2][-]{subsection.2.1.1}{Wine}{section.2.1}% 4
-\BOOKMARK [1][-]{section.2.2}{Use Case Diagram}{chapter.2}% 5
-\BOOKMARK [1][-]{section.2.3}{Architecture Diagram}{chapter.2}% 6
-\BOOKMARK [1][-]{section.2.4}{My Alcohol Free Wines}{chapter.2}% 7
-\BOOKMARK [2][-]{subsection.2.4.1}{Routes}{section.2.4}% 8
-\BOOKMARK [1][-]{section.2.5}{RESTful Supplier Web Services}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Testing}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Test Strategy}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Test Results}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{Self Evaluation}{}% 13
+\BOOKMARK [2][-]{subsection.2.1.2}{Customer}{section.2.1}% 5
+\BOOKMARK [2][-]{subsection.2.1.3}{BasketItem}{section.2.1}% 6
+\BOOKMARK [2][-]{subsection.2.1.4}{Basket}{section.2.1}% 7
+\BOOKMARK [1][-]{section.2.2}{Controllers}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.3}{Use Case Diagram}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.4}{Architecture Diagram}{chapter.2}% 10
+\BOOKMARK [1][-]{section.2.5}{My Alcohol Free Wines}{chapter.2}% 11
+\BOOKMARK [2][-]{subsection.2.5.1}{Routes}{section.2.5}% 12
+\BOOKMARK [1][-]{section.2.6}{RESTful Supplier Web Services}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Third Party Libraries/Code/Assets}{}% 14
+\BOOKMARK [0][-]{chapter.4}{Testing}{}% 15
+\BOOKMARK [1][-]{section.4.1}{Test Strategy}{chapter.4}% 16
+\BOOKMARK [1][-]{section.4.2}{System Test Table}{chapter.4}% 17
+\BOOKMARK [0][-]{chapter.5}{Self Evaluation}{}% 18
+\BOOKMARK [1][-]{section.5.1}{Screencast}{chapter.5}% 19
+\BOOKMARK [1][-]{section.5.2}{Design}{chapter.5}% 20
+\BOOKMARK [1][-]{section.5.3}{MAF Implementation}{chapter.5}% 21
+\BOOKMARK [1][-]{section.5.4}{Supplier Implementations}{chapter.5}% 22
+\BOOKMARK [1][-]{section.5.5}{Testing}{chapter.5}% 23
+\BOOKMARK [1][-]{section.5.6}{Flair}{chapter.5}% 24
+\BOOKMARK [0][-]{appendix.A}{System Test Table}{}% 25

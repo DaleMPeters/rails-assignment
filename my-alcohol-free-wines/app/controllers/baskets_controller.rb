@@ -3,16 +3,23 @@ class BasketsController < ApplicationController
 
   # GET /baskets
   # GET /baskets.json
+  # 
+  # Method to be run when GET request is made to baskets_path - lists
+  # all baskets
   def index
     @baskets = Basket.all
   end
 
   # GET /baskets/1
   # GET /baskets/1.json
+  #
+  # Method to be run when a GET request is made to baskets_path/<basket_id>
+  # USed to show the customers what they have in their basket
   def show
   end
 
   # GET /baskets/new
+  # Method to be run when a GET request is made to baskets_path/new
   def new
     @basket = Basket.new
   end
@@ -23,6 +30,8 @@ class BasketsController < ApplicationController
 
   # POST /baskets
   # POST /baskets.json
+  #
+  # Method to be run when a POST request is made to baskets_path
   def create
     @basket = Basket.new(basket_params)
 

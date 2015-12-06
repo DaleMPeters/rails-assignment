@@ -1,14 +1,16 @@
-<%= notice %>
-
+<%# 
+    Provides a page with a form for starting a new session (logging in a customer) 
+    Based on code examples provided in Michael Hartl's online book "Ruby on Rails Tutorial" 3rd
+    edition, available at https://www.railstutorial.org/book/log_in_log_out, accessed 30 Nov 2015.
+%>
 <h1>My Alcohol Free Wines - Login</h1>
 
-<!-- REFERENCE: https://www.railstutorial.org/book/log_in_log_out, accessed 29 Nov 15 -->
-<%= form_for(:session, url: login_path, method: "post") do |form_element| %>
-  <%= form_element.label :email %>
-  <%= form_element.email_field :email %>
+<%= form_for(:session, url: login_path, method: "post") do |f| %>
+  <%= f.label :email %>
+  <%= f.email_field :email %>
 
-  <%= form_element.label :password %>
-  <%= form_element.password_field :password %>
+  <%= f.label :password %>
+  <%= f.password_field :password %>
 
-  <%= form_element.submit "Log in", name: nil %>
+  <%= f.submit "Log in", name: nil %>
 <% end %>

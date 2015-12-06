@@ -43262,3 +43262,1050 @@ Processing by WinesController#index as HTML
   Rendered wines/index.html.erb within layouts/application (2127.5ms)
   [1m[36mCustomer Load (12.1ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
 Completed 200 OK in 3917ms (Views: 3546.9ms | ActiveRecord: 33.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 14:41:05 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (13.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (82.0ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1182ms (Views: 916.7ms | ActiveRecord: 29.8ms)
+
+
+Started GET "/assets/bootstrap.self-b5ca1fafbcc75bbdbe7f4011104ada0f136f89775f36741a07500a50c3a0bcc8.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:07 +0000
+
+
+Started GET "/assets/baskets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:07 +0000
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/basket_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/basket_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/baskets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:08 +0000
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started GET "/assets/wine-623bfe7bcfe22993293c51d8580df5021d62c8cba90790dd059a7848cfd01ec8.jpg" for 127.0.0.1 at 2015-12-05 14:41:09 +0000
+
+
+Started POST "/basket_items?wine_id=58" for 127.0.0.1 at 2015-12-05 14:41:13 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q2yXsadt1kr84QVPepgChzArW5cO3nSP1FWJa/SCqhuZM0d8WcXctAsN4RUQf/0eCfEnn6hs6OiUPVVlW0Qi5w==", "quantity"=>"1", "wine_id"=>"58"}
+  [1m[35mBasket Load (0.6ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", nil]]
+Completed 404 Not Found in 38ms (ActiveRecord: 2.0ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Basket with 'id'=):
+  app/controllers/application_controller.rb:19:in `get_user_basket'
+  app/controllers/basket_items_controller.rb:28:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (150.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (321.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (112.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (4.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (255.0ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 14:42:51 +0000
+
+SyntaxError (/home/dale/university/se31520/assignment/my-alcohol-free-wines/app/controllers/application_controller.rb:30: syntax error, unexpected end-of-input, expecting keyword_end):
+  app/controllers/application_controller.rb:30: syntax error, unexpected end-of-input, expecting keyword_end
+  app/controllers/wines_controller.rb:1:in `<top (required)>'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (128.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (84.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (194.1ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 14:43:03 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (1.0ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (55.9ms)
+  [1m[35mCustomer Load (1.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1
+Completed 200 OK in 686ms (Views: 523.3ms | ActiveRecord: 7.7ms)
+
+
+Started POST "/basket_items?wine_id=58" for 127.0.0.1 at 2015-12-05 14:43:09 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gc1615kxbjW2KbwHVzfUhRr9rJXD2lwitBJQNivhyqIrkqoaZ5lky0HFWF090CscIyfQnWVowEX0eow4hCdCXg==", "quantity"=>"1", "wine_id"=>"58"}
+Completed 500 Internal Server Error in 50ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `basket' for #<BasketItemsController:0xb487a8e8>):
+  app/controllers/application_controller.rb:19:in `get_user_basket'
+  app/controllers/basket_items_controller.rb:28:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (38.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (23.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (158.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (89.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (197.2ms)
+
+
+Started POST "/basket_items?wine_id=58" for 127.0.0.1 at 2015-12-05 14:43:35 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Gc1615kxbjW2KbwHVzfUhRr9rJXD2lwitBJQNivhyqIrkqoaZ5lky0HFWF090CscIyfQnWVowEX0eow4hCdCXg==", "quantity"=>"1", "wine_id"=>"58"}
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.0ms)[0m  INSERT INTO "baskets" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2015-12-05 14:43:35.477429"], ["updated_at", "2015-12-05 14:43:35.477429"]]
+  [1m[36m (105.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.8ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "basket_items" ("wine_id", "quantity", "basket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["wine_id", 58], ["quantity", 1], ["basket_id", 5], ["created_at", "2015-12-05 14:43:35.838732"], ["updated_at", "2015-12-05 14:43:35.838732"]]
+  [1m[36m (112.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/baskets/5
+Completed 302 Found in 577ms (ActiveRecord: 235.9ms)
+
+
+Started GET "/baskets/5" for 127.0.0.1 at 2015-12-05 14:43:36 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBasket Load (0.7ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBasketItem Load (6.6ms)[0m  [1mSELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?[0m  [["basket_id", 5]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  Rendered baskets/show.html.erb within layouts/application (66.8ms)
+  [1m[36mCustomer Load (0.8ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 805ms (Views: 761.6ms | ActiveRecord: 9.2ms)
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-12-05 16:37:10 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (12.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (38.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (405.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (848.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (5.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (265.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (4.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (466.6ms)
+
+
+Started GET "/baskets/5" for 127.0.0.1 at 2015-12-05 16:37:22 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBasket Load (0.9ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBasketItem Load (2.4ms)[0m  [1mSELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?[0m  [["basket_id", 5]]
+  [1m[35mWine Load (0.9ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  Rendered baskets/show.html.erb within layouts/application (597.5ms)
+  [1m[36mCustomer Load (1.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1995ms (Views: 1854.5ms | ActiveRecord: 21.5ms)
+
+
+Started GET "/assets/bootstrap.self-b5ca1fafbcc75bbdbe7f4011104ada0f136f89775f36741a07500a50c3a0bcc8.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/bootstrap.min.self-2c354d7c0179bd35563b93633b23ac5fb07c67d531d40a75695bacbd0eadb799.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/basket_items.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/baskets.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/customers.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/orders.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/scaffolds.self-ca53b58627ee1a398b9bdfb19cb5593b5c4333b6f6c8eb855277858bc0028c5a.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/sessions.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:26 +0000
+
+
+Started GET "/assets/wines.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/jquery.self-a714331225dda820228db323939889f149aec0127aeb06255646b616ba1ca419.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/jquery_ujs.self-d456baa54c1fa6be2ec3711f0a72ddf7a5b2f34a6b4f515f33767d6207b7d4b3.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/turbolinks.self-c37727e9bd6b2735da5c311aa83fead54ed0be6cc8bd9a65309e9c5abe2cbfff.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/basket_items.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/baskets.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/customers.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/orders.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/sessions.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/wines.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2015-12-05 16:37:27 +0000
+
+
+Started GET "/assets/wine-623bfe7bcfe22993293c51d8580df5021d62c8cba90790dd059a7848cfd01ec8.jpg" for 127.0.0.1 at 2015-12-05 16:37:28 +0000
+
+
+Started GET "/assets/bootstrap.css.map" for 127.0.0.1 at 2015-12-05 16:37:28 +0000
+
+ActionController::RoutingError (No route matches [GET] "/assets/bootstrap.css.map"):
+  actionpack (4.2.4) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.2.1) lib/web_console/middleware.rb:39:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.4) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.4) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.4) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.4) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.4) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.4) lib/rails/engine.rb:518:in `call'
+  railties (4.2.4) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:138:in `service'
+  /usr/lib/ruby/2.1.0/webrick/httpserver.rb:94:in `run'
+  /usr/lib/ruby/2.1.0/webrick/server.rb:295:in `block in start_thread'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (19.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_route.html.erb (29.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/routes/_table.html.erb (8.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (15.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (292.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (138.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (3.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (282.5ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-12-05 19:33:12 +0000
+  [1m[36mActiveRecord::SchemaMigration Load (0.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 282ms (ActiveRecord: 4.5ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Wine with 'id'=2):
+  app/controllers/wines_controller.rb:140:in `set_wine'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (49.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (31.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (257.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (12.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (4.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (226.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (476.5ms)
+
+
+Started GET "/wines/" for 127.0.0.1 at 2015-12-05 19:33:30 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 28ms (ActiveRecord: 0.0ms)
+
+NameError (undefined local variable or method `index_url' for #<WinesController:0xb35a560>):
+  app/controllers/wines_controller.rb:40:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (37.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (119.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (263.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (7.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (9.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (153.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (9.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (314.0ms)
+
+
+Started GET "/wines/" for 127.0.0.1 at 2015-12-05 19:33:59 +0000
+Processing by WinesController#index as HTML
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.0ms)
+
+Errno::ECONNREFUSED (Connection refused - connect(2) for "localhost" port 5000):
+  app/controllers/wines_controller.rb:40:in `index'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (55.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (7.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (194.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (3.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (3.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (120.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (235.8ms)
+
+
+Started GET "/wines/" for 127.0.0.1 at 2015-12-05 19:35:24 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.8ms)[0m  [1mSELECT "wines".* FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (1276.4ms)
+Completed 500 Internal Server Error in 1462ms (ActiveRecord: 6.5ms)
+
+ActionView::Template::Error (undefined method `current_page' for #<Wine::ActiveRecord_Relation:0xb0e05f0>):
+    3:       <div class="thumbnail">
+    4:         <table class="table">
+    5:           <tr>
+    6:             <td class="col-md-3"><%= link_to(image_tag(wine.image_url), wine_path(wine, page: @wines.current_page)) %></td>
+    7:             <td class="col-md-9">
+    8:               <table>
+    9:                 <tr><td><h3><%= wine.short_description + " (" + wine.bottle_size + ")"%></h3></td></tr>
+  app/views/wines/index.html.erb:6:in `block in _app_views_wines_index_html_erb__420775142_92728440'
+  app/views/wines/index.html.erb:1:in `_app_views_wines_index_html_erb__420775142_92728440'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (200.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (60.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (5.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (404.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (128.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (237.9ms)
+
+
+Started GET "/wines/" for 127.0.0.1 at 2015-12-05 19:36:44 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (1.9ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (201.0ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 2155ms (Views: 1878.4ms | ActiveRecord: 15.3ms)
+
+
+Started GET "/wines?utf8=%E2%9C%93&search_query=some" for 127.0.0.1 at 2015-12-05 19:36:56 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"utf8"=>"✓", "search_query"=>"some"}
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (1.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE (short_description LIKE '%some%')  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (67.6ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 764ms (Views: 732.0ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/wines/" for 127.0.0.1 at 2015-12-05 19:38:16 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (1.3ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (80.4ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 1152ms (Views: 1006.1ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/wines/2" for 127.0.0.1 at 2015-12-05 19:38:17 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[35mWine Load (0.8ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 2]]
+Completed 404 Not Found in 46ms (ActiveRecord: 0.8ms)
+
+ActiveRecord::RecordNotFound (Couldn't find Wine with 'id'=2):
+  app/controllers/wines_controller.rb:134:in `set_wine'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (129.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (73.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (30.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (425.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (20.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (29.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (12.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (14.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (367.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (2.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (6.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (600.2ms)
+
+
+Started GET "/wines/58?page=1" for 127.0.0.1 at 2015-12-05 19:38:29 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"page"=>"1", "id"=>"58"}
+  [1m[36mWine Load (4.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 58]]
+  Rendered wines/show.html.erb within layouts/application (44.0ms)
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 688ms (Views: 671.4ms | ActiveRecord: 4.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 19:38:36 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (1.0ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (57.9ms)
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 496ms (Views: 456.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/wines/58?page=1" for 127.0.0.1 at 2015-12-05 19:38:40 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"page"=>"1", "id"=>"58"}
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 58]]
+  Rendered wines/show.html.erb within layouts/application (41.5ms)
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 869ms (Views: 857.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 19:38:45 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (1.5ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  Rendered wines/index.html.erb within layouts/application (37.0ms)
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 680ms (Views: 635.4ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-12-05 20:24:37 +0000
+Processing by CustomersController#new as HTML
+  Rendered customers/_form.html.erb (173.3ms)
+  Rendered customers/new.html.erb within layouts/application (189.3ms)
+  [1m[36mCustomer Load (5.0ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 1099ms (Views: 959.4ms | ActiveRecord: 20.6ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 20:24:42 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (8.1ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (54.2ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 643ms (Views: 494.3ms | ActiveRecord: 14.8ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 20:56:27 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (89.4ms)
+  [1m[36mCustomer Load (0.5ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 1177ms (Views: 1147.1ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/wines/58?page=1" for 127.0.0.1 at 2015-12-05 21:07:10 +0000
+Processing by WinesController#show as HTML
+  Parameters: {"page"=>"1", "id"=>"58"}
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  Rendered wines/show.html.erb within layouts/application (52.6ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 780ms (Views: 753.8ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 21:13:52 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (5.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  Rendered wines/index.html.erb within layouts/application (89.8ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 1365ms (Views: 1317.6ms | ActiveRecord: 6.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 23:40:54 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (6.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091245"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (26.8ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "A Nice Wine"], ["bottle_size", "small"], ["price", 6.99], ["long_description", "This is made from French grapes"], ["origin_country", "Germany"], ["company", "Bargain Wines"], ["grape_type", "Red"], ["is_vegetarian", "f"], ["image_url", "wine.jpg"], ["barcode", "091245"], ["created_at", "2015-12-05 23:40:54.379616"], ["updated_at", "2015-12-05 23:40:54.379616"]]
+  [1m[36m (120.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Zebra Wine"], ["bottle_size", "Medium"], ["price", 5.99], ["long_description", "South African Non-Alcoholic Wine"], ["origin_country", "South Africa"], ["company", "Bargain Wines"], ["grape_type", "White"], ["is_vegetarian", "t"], ["image_url", "wine.jpg"], ["barcode", "093435"], ["created_at", "2015-12-05 23:40:54.546844"], ["updated_at", "2015-12-05 23:40:54.546844"]]
+  [1m[36m (109.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091256"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (11.3ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Water Wine"], ["bottle_size", "Medium"], ["price", 10.99], ["long_description", "A very nice wine, 50% water"], ["origin_country", "Polane"], ["company", "Bargain Wines"], ["grape_type", "Merlot"], ["is_vegetarian", "f"], ["image_url", "wine.jpg"], ["barcode", "091256"], ["created_at", "2015-12-05 23:40:54.686568"], ["updated_at", "2015-12-05 23:40:54.686568"]]
+  [1m[36m (107.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "My home-made wine"], ["bottle_size", "Small"], ["price", 9.99], ["long_description", "Made in the home of the owner of Bargain Wines"], ["origin_country", "UK"], ["company", "Bargain Wines"], ["grape_type", "White"], ["is_vegetarian", "t"], ["image_url", "wine.jpg"], ["barcode", "091200"], ["created_at", "2015-12-05 23:40:54.826421"], ["updated_at", "2015-12-05 23:40:54.826421"]]
+  [1m[36m (111.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "06135"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (8.4ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "A Lovely Greek Wine"], ["bottle_size", "Small"], ["price", 1.99], ["long_description", "Lovely and from Greece. Sweet."], ["origin_country", "Greece"], ["company", "Bargain Wines"], ["grape_type", "Chardonnay"], ["is_vegetarian", "f"], ["image_url", "wine.jpg"], ["barcode", "06135"], ["created_at", "2015-12-05 23:40:54.985793"], ["updated_at", "2015-12-05 23:40:54.985793"]]
+  [1m[36m (132.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.8ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36m (0.5ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "An Italian Wine"], ["bottle_size", "Medium"], ["price", 9.99], ["long_description", "Wine made in Nago Torbole"], ["origin_country", "Italy"], ["company", "Bargain Wines"], ["grape_type", "Rose"], ["is_vegetarian", "t"], ["image_url", "wine.jpg"], ["barcode", "093333"], ["created_at", "2015-12-05 23:40:55.152014"], ["updated_at", "2015-12-05 23:40:55.152014"]]
+  [1m[36m (151.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091333"]]
+  [1m[36m (0.4ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Spanish Crianza"], ["bottle_size", "Large"], ["price", 5.99], ["long_description", "Wine from Spain"], ["origin_country", "Spain"], ["company", "Bargain Wines"], ["grape_type", "Chardonnay"], ["is_vegetarian", "t"], ["image_url", "wine.jpg"], ["barcode", "091333"], ["created_at", "2015-12-05 23:40:55.326519"], ["updated_at", "2015-12-05 23:40:55.326519"]]
+  [1m[36m (113.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36m (0.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Some Very Nice Wine"], ["bottle_size", "small"], ["price", 89.99], ["long_description", "A description of some very nice wine"], ["origin_country", "Switzerland"], ["company", "Bargain Wines"], ["grape_type", "Rose"], ["is_vegetarian", "t"], ["image_url", "wine.jpg"], ["barcode", "0914545"], ["created_at", "2015-12-05 23:40:55.465522"], ["updated_at", "2015-12-05 23:40:55.465522"]]
+  [1m[36m (98.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0145"]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "wines" ("short_description", "bottle_size", "price", "long_description", "origin_country", "company", "grape_type", "is_vegetarian", "image_url", "barcode", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)  [["short_description", "Yellow Vine Wine"], ["bottle_size", "medium"], ["price", 19.99], ["long_description", "A nice Red Wine, made by Yellow Wines"], ["origin_country", "Australia"], ["company", "Bargain Wines"], ["grape_type", "Rose"], ["is_vegetarian", "f"], ["image_url", "wine.jpg"], ["barcode", "0145"], ["created_at", "2015-12-05 23:40:55.579163"], ["updated_at", "2015-12-05 23:40:55.579163"]]
+  [1m[36m (274.6ms)[0m  [1mcommit transaction[0m
+  [1m[35mWine Load (1.5ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (171.2ms)
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 2140ms (Views: 599.6ms | ActiveRecord: 1287.9ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 23:42:34 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (1.8ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (177.5ms)
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 781ms (Views: 664.9ms | ActiveRecord: 8.2ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 23:42:47 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (1.6ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (179.0ms)
+  [1m[35mCustomer Load (1.0ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 801ms (Views: 740.2ms | ActiveRecord: 9.0ms)
+
+
+Started GET "/wines?page=2" for 127.0.0.1 at 2015-12-05 23:43:02 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (1.3ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 10
+  Rendered wines/index.html.erb within layouts/application (22.7ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 464ms (Views: 409.1ms | ActiveRecord: 7.4ms)
+
+
+Started GET "/wines?page=1" for 127.0.0.1 at 2015-12-05 23:43:05 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (1.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091245"]]
+  [1m[36mWine Load (3.7ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093435"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091256"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091200"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "06135"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091333"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0914545"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0145"]]
+  [1m[36mWine Load (1.6ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (164.6ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 593ms (Views: 544.4ms | ActiveRecord: 11.5ms)
+
+
+Started GET "/wines?page=1" for 127.0.0.1 at 2015-12-05 23:43:21 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"1"}
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091245"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093435"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091256"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091200"]]
+  [1m[35mWine Load (20.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "06135"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091333"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0914545"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0145"]]
+  [1m[36mWine Load (1.5ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.7ms)[0m  SELECT COUNT(*) FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (202.1ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 817ms (Views: 700.8ms | ActiveRecord: 27.3ms)
+
+
+Started POST "/basket_items?wine_id=64" for 127.0.0.1 at 2015-12-05 23:43:29 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/+6gUVv6H/BRK04xhdfKJaMOhsLNGz6M2e1hKWOKdcXc5Xnm+StHuELRr0QwIsxENHt5NhyRobTf2EkbfQhejw==", "quantity"=>"1", "wine_id"=>"64"}
+  [1m[35mBasket Load (0.8ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 64]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 2.3ms)
+
+NoMethodError (undefined method `basket_items' for nil:NilClass):
+  app/controllers/basket_items_controller.rb:46:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (43.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (122.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (3.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (2.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (70.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (3.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (145.8ms)
+
+
+Started POST "/basket_items?wine_id=64" for 127.0.0.1 at 2015-12-05 23:43:45 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/+6gUVv6H/BRK04xhdfKJaMOhsLNGz6M2e1hKWOKdcXc5Xnm+StHuELRr0QwIsxENHt5NhyRobTf2EkbfQhejw==", "quantity"=>"1", "wine_id"=>"64"}
+  [1m[35mBasket Load (0.4ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 64]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.8ms)
+
+NoMethodError (undefined method `basket_items' for nil:NilClass):
+  app/controllers/basket_items_controller.rb:46:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (63.9ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (29.1ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.4ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (170.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (2.3ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (73.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (156.7ms)
+
+
+Started GET "/customers/new" for 127.0.0.1 at 2015-12-05 23:44:23 +0000
+Processing by CustomersController#new as HTML
+  Rendered customers/_form.html.erb (12.8ms)
+  Rendered customers/new.html.erb within layouts/application (25.5ms)
+  [1m[35mCustomer Load (0.3ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 5]]
+Completed 200 OK in 653ms (Views: 646.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-12-05 23:44:26 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (18.2ms)
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 462ms (Views: 458.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-12-05 23:44:29 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HEvjN/+RMERCcvU15Ty+Za/r/qFlPfj8VFdLEg8ZYzA/QDqAXUBoDFGIFEBQybgEOJ4BVbS3Z8RSYmMgEZtIeg==", "session"=>{"email"=>"testuser5@testdomain.com", "password"=>"[FILTERED]"}}
+  [1m[35mCustomer Load (0.7ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT 1  [["email", "testuser5@testdomain.com"]]
+  Rendered sessions/new.html.erb within layouts/application (6.8ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 556ms (Views: 547.5ms | ActiveRecord: 1.1ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-12-05 23:44:38 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5t7P3zd74U47ZrSGy7NLeip6sabBMoMoliLOhZyD2bbF1RZolaq5BiicVfN+Rk0bvQ9OUhC4HBCQF+a3ggHy/A==", "session"=>{"email"=>"testuser5@testdomain.com", "password"=>"[FILTERED]"}}
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT 1  [["email", "testuser5@testdomain.com"]]
+  Rendered sessions/new.html.erb within layouts/application (4.7ms)
+  [1m[36mCustomer Load (0.3ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 5]]
+Completed 200 OK in 529ms (Views: 515.9ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-12-05 23:44:47 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5yEb43zAMcPkftDmgZ2zp/i+ZgNMUsKFQ2bD5lr+YBzEKsJU3hFpi/eEMZM0aLXGb8uZ953YXb1FU+vURHxLVg==", "session"=>{"email"=>"testuser2@testdomain.com", "password"=>"[FILTERED]"}}
+  [1m[35mCustomer Load (0.5ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT 1  [["email", "testuser2@testdomain.com"]]
+Redirected to http://localhost:3000/wines
+Completed 302 Found in 252ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 23:44:47 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.8ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (1.9ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  [1m[36m (1.0ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (237.4ms)
+  [1m[35mCustomer Load (0.4ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 1033ms (Views: 964.0ms | ActiveRecord: 8.9ms)
+
+
+Started POST "/basket_items?wine_id=64" for 127.0.0.1 at 2015-12-05 23:44:52 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/c0+zg3mBRthCltguLLxaqCiGlwZjxP3EQqcEl5W+e/exud5rzddU3LwuhUNR/cLN9flqMgFjM8XP7QgQNTSpQ==", "quantity"=>"1", "wine_id"=>"64"}
+  [1m[36mBasket Load (4.5ms)[0m  [1mSELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 64]]
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 5.0ms)
+
+NoMethodError (undefined method `basket_items' for nil:NilClass):
+  app/controllers/basket_items_controller.rb:46:in `create'
+
+
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_source.erb (39.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (18.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (6.2ms)
+  Rendered /var/lib/gems/2.1.0/gems/actionpack-4.2.4/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (111.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.8ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (1.6ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (69.0ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (1.7ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (2.5ms)
+  Rendered /var/lib/gems/2.1.0/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (151.3ms)
+
+
+Started POST "/basket_items?wine_id=64" for 127.0.0.1 at 2015-12-05 23:50:08 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/c0+zg3mBRthCltguLLxaqCiGlwZjxP3EQqcEl5W+e/exud5rzddU3LwuhUNR/cLN9flqMgFjM8XP7QgQNTSpQ==", "quantity"=>"1", "wine_id"=>"64"}
+  [1m[36mBasket Load (0.7ms)[0m  [1mSELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWine Load (1.0ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 64]]
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "basket_items" ("wine_id", "quantity", "basket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["wine_id", 64], ["quantity", 1], ["basket_id", 5], ["created_at", "2015-12-05 23:50:09.948186"], ["updated_at", "2015-12-05 23:50:09.948186"]]
+  [1m[36m (126.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/baskets/5
+Completed 302 Found in 609ms (ActiveRecord: 140.7ms)
+
+
+Started GET "/baskets/5" for 127.0.0.1 at 2015-12-05 23:50:10 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBasket Load (0.4ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBasketItem Load (1.0ms)[0m  [1mSELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?[0m  [["basket_id", 5]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 64]]
+  Rendered baskets/show.html.erb within layouts/application (89.7ms)
+  [1m[35mCustomer Load (0.7ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1  [["id", 2]]
+Completed 200 OK in 712ms (Views: 701.2ms | ActiveRecord: 4.9ms)
+
+
+Started DELETE "/logout" for 127.0.0.1 at 2015-12-05 23:50:20 +0000
+Processing by SessionsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"DyZrZrqi/IHbcEQbG416n8CHdkqNQ57AnV0MXJheZwAsLbLRGHOkyciKpW6ueHz+V/KJvlzJAfibaCRuhtxMSg=="}
+  [1m[36mCustomer Load (0.4ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" = ? LIMIT 1[0m  [["id", 2]]
+Redirected to http://localhost:3000/wines
+Completed 302 Found in 14ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/wines" for 127.0.0.1 at 2015-12-05 23:50:20 +0000
+Processing by WinesController#index as HTML
+  [1m[35mWine Load (0.9ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091245"]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093435"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091256"]]
+  [1m[36mWine Load (1.1ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091200"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "06135"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093333"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091333"]]
+  [1m[36mWine Load (1.3ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0914545"]]
+  [1m[35mWine Load (16.3ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0145"]]
+  [1m[36mWine Load (5.9ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0[0m
+  [1m[35m (0.5ms)[0m  SELECT COUNT(*) FROM "wines"
+  Rendered wines/index.html.erb within layouts/application (252.7ms)
+  [1m[36mCustomer Load (0.8ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1393ms (Views: 1218.6ms | ActiveRecord: 30.2ms)
+
+
+Started POST "/basket_items?wine_id=59" for 127.0.0.1 at 2015-12-05 23:50:30 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"A2nGUv3bbHGKJ1Aonelmupc+xADkqLe0exdSn7RTpqQgYh/lXwo0OZndsV0oHGDbAEs79DUiKIx9InqtqtGN7g==", "quantity"=>"2", "wine_id"=>"59"}
+  [1m[35mBasket Load (0.4ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 59]]
+  [1m[35m (1.3ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "basket_items" ("wine_id", "quantity", "basket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["wine_id", 59], ["quantity", 2], ["basket_id", 5], ["created_at", "2015-12-05 23:50:30.182539"], ["updated_at", "2015-12-05 23:50:30.182539"]]
+  [1m[35m (100.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/baskets/5
+Completed 302 Found in 159ms (ActiveRecord: 103.0ms)
+
+
+Started GET "/baskets/5" for 127.0.0.1 at 2015-12-05 23:50:30 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mBasket Load (0.4ms)[0m  [1mSELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mBasketItem Load (0.4ms)[0m  SELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?  [["basket_id", 5]]
+  [1m[36mWine Load (0.6ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 58]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 64]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 59]]
+  Rendered baskets/show.html.erb within layouts/application (81.3ms)
+  [1m[35mCustomer Load (0.6ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1
+Completed 200 OK in 1005ms (Views: 992.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2015-12-05 23:50:59 +0000
+Processing by WinesController#index as HTML
+  [1m[36mWine Load (2.0ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (3.0ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 0
+  [1m[36m (0.6ms)[0m  [1mSELECT COUNT(*) FROM "wines"[0m
+  Rendered wines/index.html.erb within layouts/application (180.3ms)
+  [1m[35mCustomer Load (0.9ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1
+Completed 200 OK in 874ms (Views: 710.3ms | ActiveRecord: 15.5ms)
+
+
+Started GET "/wines?page=2" for 127.0.0.1 at 2015-12-05 23:51:10 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091234"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091235"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091245"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093435"]]
+  [1m[36mWine Load (0.7ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091256"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091200"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "06135"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "093333"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091333"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0914545"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0145"]]
+  [1m[35mWine Load (1.2ms)[0m  SELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 10
+  Rendered wines/index.html.erb within layouts/application (20.4ms)
+  [1m[36mCustomer Load (2.2ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 583ms (Views: 454.5ms | ActiveRecord: 8.4ms)
+
+
+Started GET "/wines?page=2" for 127.0.0.1 at 2015-12-05 23:51:16 +0000
+Processing by WinesController#index as HTML
+  Parameters: {"page"=>"2"}
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091234"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091235"]]
+  [1m[35mWine Load (0.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091245"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093435"]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091256"]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "091200"]]
+  [1m[35mWine Load (0.7ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "06135"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "093333"]]
+  [1m[35mWine Load (0.5ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "091333"]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1[0m  [["barcode", "0914545"]]
+  [1m[35mWine Load (0.9ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."barcode" = ? LIMIT 1  [["barcode", "0145"]]
+  [1m[36mWine Load (1.6ms)[0m  [1mSELECT  "wines".* FROM "wines"  ORDER BY "wines"."short_description" ASC LIMIT 10 OFFSET 10[0m
+  Rendered wines/index.html.erb within layouts/application (41.4ms)
+  [1m[35mCustomer Load (1.1ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1
+Completed 200 OK in 577ms (Views: 472.2ms | ActiveRecord: 8.5ms)
+
+
+Started POST "/basket_items?wine_id=61" for 127.0.0.1 at 2015-12-05 23:51:20 +0000
+Processing by BasketItemsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RvtK1lNjXnjtsVLShHeRiSS/1u2p+eTnNLJFcrXHa71l8JNh8bIGMP5Ls6cxgpfos8opGXhze98yh21Aq0VA9w==", "quantity"=>"1", "wine_id"=>"61"}
+  [1m[36mBasket Load (0.7ms)[0m  [1mSELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mWine Load (1.6ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 61]]
+  [1m[36m (2.8ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "basket_items" ("wine_id", "quantity", "basket_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)  [["wine_id", 61], ["quantity", 1], ["basket_id", 5], ["created_at", "2015-12-05 23:51:20.817497"], ["updated_at", "2015-12-05 23:51:20.817497"]]
+  [1m[36m (191.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/baskets/5
+Completed 302 Found in 378ms (ActiveRecord: 199.7ms)
+
+
+Started GET "/baskets/5" for 127.0.0.1 at 2015-12-05 23:51:21 +0000
+Processing by BasketsController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mBasket Load (0.4ms)[0m  SELECT  "baskets".* FROM "baskets" WHERE "baskets"."id" = ? LIMIT 1  [["id", 5]]
+  [1m[36mBasketItem Load (1.0ms)[0m  [1mSELECT "basket_items".* FROM "basket_items" WHERE "basket_items"."basket_id" = ?[0m  [["basket_id", 5]]
+  [1m[35mWine Load (0.9ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 58]]
+  [1m[36mWine Load (0.4ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 64]]
+  [1m[35mWine Load (0.4ms)[0m  SELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1  [["id", 59]]
+  [1m[36mWine Load (0.5ms)[0m  [1mSELECT  "wines".* FROM "wines" WHERE "wines"."id" = ? LIMIT 1[0m  [["id", 61]]
+  Rendered baskets/show.html.erb within layouts/application (179.9ms)
+  [1m[35mCustomer Load (0.8ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1
+Completed 200 OK in 704ms (Views: 689.2ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/login" for 127.0.0.1 at 2015-12-05 23:51:28 +0000
+Processing by SessionsController#new as HTML
+  Rendered sessions/new.html.erb within layouts/application (16.7ms)
+  [1m[36mCustomer Load (0.7ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 1036ms (Views: 1027.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/login" for 127.0.0.1 at 2015-12-05 23:51:32 +0000
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ANZvPoEvwd/9hDOWg1fy6UULK7QyvlTOyR15ZOkFm2oj3baJI/6Zl+5+0uM2ovSI0n7UQOM0y/bPKFFW94ewIA==", "session"=>{"email"=>"testuser5@testdomain.com", "password"=>"[FILTERED]"}}
+  [1m[35mCustomer Load (0.7ms)[0m  SELECT  "customers".* FROM "customers" WHERE "customers"."email" = ? LIMIT 1  [["email", "testuser5@testdomain.com"]]
+  Rendered sessions/new.html.erb within layouts/application (4.8ms)
+  [1m[36mCustomer Load (1.9ms)[0m  [1mSELECT  "customers".* FROM "customers" WHERE "customers"."id" IS NULL LIMIT 1[0m
+Completed 200 OK in 598ms (Views: 589.1ms | ActiveRecord: 2.7ms)

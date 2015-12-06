@@ -1,13 +1,16 @@
+<% # Page used to show the customer all the information about the wine they have selected %>
 <div class="col-md-12">
   <div class="thumbnail">
     <table class="table">
       <tr>
         <td>
+          <% # Generate an image tag showing a picture of the wine %>
           <%= image_tag(@wine.image_url, width: 400) %>
         </td>
         <td>
           <table>
             <tr><td><h3><%= @wine.short_description + " (" + @wine.short_description + ")" %></h2></td></tr>
+            <% # Convert the float containing the price to a currency for readability %>
             <tr><td><%= number_to_currency(@wine.price, unit: "£") %></td></tr>
             <tr><td><%= @wine.long_description %></td></tr>
             <tr><td><strong>Origin: </strong><%= @wine.origin_country %></td></tr>
@@ -15,12 +18,13 @@
             <tr><td><strong>Grape type: </strong><%= @wine.grape_type %></td></tr>
             <tr><td>&nbsp;</td></tr>
             <tr><td>
+              <% # Generate a number field tag in a form so the user can change the quantity of the wine they want %>
               <%= form_tag(basket_items_path(wine_id: @wine), method: "post") do %>
-                <%= number_field_tag :quantity, params[:quantity], value: "1", min: "1", required: true %>
-                <%= submit_tag "Add to Basket", name: nil %>
+                <%= number_field_tag(:quantity, params[:quantity], value: "1", min: "1", required: true) %>
+                <%= submit_tag("Add to Basket", name: nil) %>
               <% end %>
             </td></tr>
-            <tr><td><%= link_to 'Edit', edit_wine_path(@wine) %> | <%= link_to 'Back', wines_path %></td></tr>
+            <tr><td><%= link_to 'Back to listings', wines_path %></td></tr>
           </table>
         </td>
       </tr>

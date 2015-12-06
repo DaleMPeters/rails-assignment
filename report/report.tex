@@ -15,6 +15,7 @@
 \usepackage{pdflscape}
 \usepackage{tabularx}
 \usepackage{longtable}
+\usepackage{pdfpages}
 
 \usepackage[pdftex,pdfauthor={Dale Mark Peters (Student Number 120062861)},pdftitle={SE31520 Assignment Documentation | Aberystwyth University},pdfcreator={pdflatex}]{hyperref}
 
@@ -43,12 +44,6 @@
 
 \maketitle
 
-\newgeometry{left=4cm,right=4cm}
-\renewcommand{\abstractname}{Acknowledgements}
-\begin{abstract}
-\end{abstract}
-\restoregeometry
-
 \tableofcontents\newpage
 \chapter{Introduction}
     This document it written to accompany the software I have written for the SE31520 (Developing Internet Based Applications) 2015-2016 assignment. In this
@@ -62,25 +57,43 @@
     an order, where an `order' consists of sending the details of the purchase and the customer details to the relevant supplier via a RESTful request.
 
 \chapter{Design/Architecture}
-    \section{Data Structures}
-    From the specification of the assignment and the system that needs to be implemented, some of the models that needed to be considered were clear. 
+    \section{Data Models (Classes)}
+    From the specification of the assignment and the system that needs to be implemented, some of the models that needed to be considered were clear.
     These are detailed in this section.
     
     \subsection{Wine}
-    Perhaps the most important of the data structures to be represented in the application is the products that the shop is selling to its customers (i.e.\ a
-    particular bottle of wine). These are retrieved from two suppliers but will need to be stored in the MAF database to reduce the number of hits the application
-    does on the data services and to improve the performance of MAF. Information stored about the products is as follows:
-    \begin{itemize}
-            \item \textbf{Short and long description} (String): Holds the title of the wine and the long description respectively. These will be textual.
-            \item \textbf{Bottle Size} (String): I have made the assumption that this will be from a set of sizes (small, medium or large).
-            \item \textbf{Price} (float): This could be decimalised with two decimal places, so a float representation is most appropriate.
-            \item \textbf{Origin Country, Company and Grape Types} (String): Textual fields, so string is the best choice.
-            \item \textbf{Vegetarian (boolean)}: This can either be true or false, so boolean is the best choice.
-    \end{itemize}
+    The most important of the models to be implemented in the application was the Wine model, which represents a product MAF sells. Most of its attributes were
+    can be represented by a string as they are textual attributes of the product. Both descriptions, the bottle size, the origin country, the bottle size, the supplier
+    and the grape types can all be represented textually, so I chose a string representation for these.
+    
+    The price field, however, could be a decimalised amount, so I chose a float representation for these. Also to be stored was the suitability for vegetarians, which 
+    is a binary concept, so I chose a boolean representation for this. 
+    
+    A field I added but is not mentioned in the specification is the some sort of unique identifier to distinguish the same product from
+    two difference suppliers. I therefore added a barcode field so that a wine from a particular supplier could be compared to the same wine from the other
+    supplier which might have different information. I chose a string representation for this to cover cases where it might begin with a 0.
 
-    In addition to these attributes, I added a barcode attribute to the wine. While this wasn't specified in the specification, it was necessary to add 
-    this to ensure that an identical product from different suppliers can be compared, even if they have different short descriptions or long descriptions.
-    This is stored as a string to cover for cases where the barcode might begin with a 0.
+    \subsection{Customer}
+    I have implemented a customer model to represent the customers who might be purchasing from MAF. All the information to be stored about customers was
+    to be stored in the form of a string, as all the information to be stored about customers is textual. Another field I had to add to the database for this
+    model but wasn't specified in the specification was the password digest field, which is required by the Ruby bcrypt gem to hash the customer passwords.
+    It also makes sense that each customer holds a basket, so I added this field to the database to hold the foreign key reference to the user's basket id.
+
+    \subsection{BasketItem}
+    It is clear from the specification that the basket in the MAF application could potentially hold several Wine items if the customer wants to add
+    several wines to their basket. It is therefore necessary to have a model that links these two tables up. By having this in a separate table, I
+    can have as many items as desired in the table without having to have a separate column for each product in the basket. In the way I have designed it,
+    the database table just needs two foreign key references - one specifying which wine the item of the basket represents, and the other representing the
+    basket it belongs to.
+
+    \subsection{Basket}
+    There isn't really much information about what information should be stored about a particular basket in the specification, other than that
+    it belongs to a user and that it contains many items. It can therefore be seen as just a container for BasketItem objects in the application,
+    so each basket can potentially have multiple BasketItems. It is for this reason that I have declared in the Basket model that it has many
+    BasketItems.
+
+    \section{Controllers}
+    With Ruby on Rails being a Model View Controller framework, it was important to define several controllers for use in the application.
 
     \section{Use Case Diagram}
     \includegraphics[scale=0.60]{use-case-diagram.png}
@@ -91,7 +104,6 @@
     \section{My Alcohol Free Wines}
     \subsection{Routes}
     This section details the routes that are used in the application.
-
 
     \section{RESTful Supplier Web Services}
     As previously mentioned, another part of this assignment was to develop two external RESTful HTTP web services (the suppliers to MAF) which
@@ -111,31 +123,62 @@
     started. \textbf{STORE IN JSON FILE AND CHANGE THIS IF HAVE TIME}. If I had the time, I would have stored these in a separate JSON file and read this in when the service
     starts, so as to reduce the amount of text in the service code. The data in the two applications is different so that the two suppliers' prices can be compared.
 
+\chapter{Third Party Libraries/Code/Assets}
+    Whilst doing this assignment, in order to reduce the amount of time it took me to develop the application, I used several third party
+    Ruby on Rails gems in addition to the ones that are in a default Rails project. These are listed in the Gemfile, but are also as follows:
+    \begin{itemize}
+        \item \textbf{rest-client}: Used for the sending of requests from the MAF application to the two RESTful APIs.
+        \item \textbf{bcrypt}: Used for the encryption of the customer's user name and password.
+        \item \textbf{will\_paginate-bootstrap}: Used for the Bootstrap-style pagination of the wines in the wines listing page.
+        \item \textbf{activerecord-session\_store}: Used to store sessions in a database.
+        \item \textbf{will\_paginate}: Used for pagination of the wines in the wines listings page
+    \end{itemize}
+
+    For the styling of the website, I used Bootstrap CSS, which is contained in the files with names beginning with `bootstrap' in the app/assets/stylsheets
+    directory. This was obtained from \cite{bootstrap}.
+
+    The image for the wine was obtained from \cite{wine-image}.
+
+    I also followed tutorials and the book recommended in the reading list of this module in the implementation of this assignment. I have 
+    commented in the code to acknowledge where I have based my code on other people's examples. The particular parts of the assignment I
+    needed to do this for were the implementation of the basket and the implementation of the login and log out functionalities. For the
+    basket functionality, I used one of the recommended books for the module (\cite{agile-web-dev}), and for the logging in a logging out functionality
+    I used an online tutorial, located at\cite{online-ruby-book}.
+
+
 
 \chapter{Testing}
     \section{Test Strategy}
+    \section{System Test Table}
+    To create the system test table, I looked at each of the functional requirements given in the specification for the
+    assignment and identified the key parts of each requirement that could be tested. Some of the functional requirements can
+    be split into several different tests, so I have done this where necessary. For each of the described tests, I followed the contents
+    of the `Input' column and recorded the results in the table. This table can be found in the Appendices of this document.
 
-    %\newpage
-    \begin{landscape}
-        \section{Test Results}
-        \begin{center}
-            \begin{longtable}{ |c|c|c|c|c|c|c|c| } 
-                \hline
-                \textbf{Test ID} & \textbf{Requirement} & \textbf{Description} & \textbf{Inputs} & \textbf{Expected Outputs} & \textbf{Actual Outputs} & \textbf{Pass/Fail} & \textbf{Comments}
-                \\\hline\hline
-                1 & FR1 & On list wines screen: Customer can see wines sold, listed in alphabetical order and paginated & Navigate to wines page & List of all wines sold by MAF & & & Comments\\ \hline
-                1 & FR1 & On list wines screen: Customer can see wine picture, short description, bottle size, price and supplier & Navigate to wines page, look at information listed & All information displayed & & & Comments\\ \hline
-                1 & FR1 & On list wines screen: Customer can see wine picture, short description, bottle size, price and supplier & Navigate to wines page, look at information listed & All information displayed & & & Comments\\
-                1 & FR1 & On list wines screen: Customer can see wine picture, short description, bottle size, price and supplier & Navigate to wines page, look at information listed & All information displayed & & & Comments\\
-                \hline
-            \end{longtable}
-        \end{center}
-    \end{landscape}
-
-    \blindtext
 \chapter{Self Evaluation}
-    \blindtext
+    \section{Screencast}
+    \section{Design}
+    In hindsight, could have had a separate Supplier model, stored in the database so that each has its own unique identifier. Each Wine would
+    then have a foreign key reference to a supplier id. This would have made it easier to identify which of the two suppliers to send the 
+    order to when the customer checks out their order.
+
+    \section{MAF Implementation}
+    \section{Supplier Implementations}
+    \section{Testing}
+    \section{Flair}
 
 \printbibliography
+
+\titleformat
+{\chapter}
+[block]
+{\bfseries\huge}
+{Appendix \thechapter:}
+{3ex}
+{}
+[]
+\appendix
+\chapter{System Test Table}
+\includepdf[pages={-}, angle=90]{images/test-table.pdf}
 
 \end{document}
